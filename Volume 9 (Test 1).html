@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>IELTS Listening Test V9T1 | Elites Learning Center</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        .botanical-background{position:fixed;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse at 0% 0%,#e8f0fc 0%,transparent 50%),radial-gradient(ellipse at 100% 0%,#fef3d8 0%,transparent 45%),radial-gradient(ellipse at 100% 100%,#e4f2ff 0%,transparent 50%),radial-gradient(ellipse at 0% 100%,#fde8f5 0%,transparent 45%),#ffffff;z-index:0;pointer-events:none}
+        .vein-lines{position:absolute;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(circle,rgba(30,58,95,0.12) 1px,transparent 1px);background-size:28px 28px}
+        .leaf-whispers{position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(circle at 8% 12%,rgba(99,179,237,0.18) 0%,transparent 28%),radial-gradient(circle at 92% 10%,rgba(245,182,66,0.16) 0%,transparent 26%),radial-gradient(circle at 88% 90%,rgba(129,199,245,0.15) 0%,transparent 30%),radial-gradient(circle at 10% 88%,rgba(252,196,228,0.18) 0%,transparent 28%),radial-gradient(circle at 50% 50%,rgba(255,255,255,0.9) 0%,transparent 55%);filter:blur(2px)}
+        .floating-spores{position:absolute;top:0;right:0;width:340px;height:340px;background:repeating-linear-gradient(-45deg,transparent,transparent 8px,rgba(245,182,66,0.07) 8px,rgba(245,182,66,0.07) 10px);border-radius:0 0 0 100%}
+        .marble-flow{position:absolute;bottom:0;left:0;width:280px;height:280px;background:repeating-linear-gradient(-45deg,transparent,transparent 8px,rgba(30,58,95,0.06) 8px,rgba(30,58,95,0.06) 10px);border-radius:0 100% 0 0}
+        .ripple-rings{position:absolute;top:-180px;left:50%;transform:translateX(-50%);width:900px;height:400px;border-radius:50%;border:1.5px solid rgba(30,58,95,0.07);box-shadow:0 0 0 40px rgba(30,58,95,0.03),0 0 0 80px rgba(30,58,95,0.02),0 0 0 120px rgba(30,58,95,0.015)}
+        .soft-vignette{position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse at center,transparent 60%,rgba(180,200,230,0.2) 100%)}
+        body{font-family:'Segoe UI','Roboto','Helvetica Neue',sans-serif;padding:40px 20px;display:flex;justify-content:center;min-height:100vh;position:relative;background:transparent}
+        .main-container{width:100%;max-width:1000px;position:relative;z-index:10}
+        .sticky-top-bar{position:sticky;top:0;z-index:50;padding-top:10px;padding-bottom:10px}
+        .top-bar{display:flex;justify-content:space-between;align-items:center;padding:12px 24px;background:rgba(255,255,255,0.96);border-radius:60px;box-shadow:0 4px 12px rgba(0,0,0,0.06);backdrop-filter:blur(2px);border:1px solid rgba(30,58,95,0.08);gap:16px;flex-wrap:wrap}
+        .logo-area{display:flex;align-items:center;gap:12px}
+        .logo-img{height:44px;width:auto;border-radius:8px;object-fit:contain}
+        .logo-text{font-weight:700;font-size:18px;color:#000;letter-spacing:0.5px}
+        .waveform-player-compact{background:#eef2f7;border-radius:40px;padding:4px 12px 4px 16px;display:flex;align-items:center;gap:12px;min-width:200px;flex:1;max-width:400px}
+        .waveform-play-btn{background:#ffcc00;border:none;width:34px;height:34px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform 0.2s;flex-shrink:0}
+        .waveform-play-btn svg{fill:#000;width:18px;height:18px}
+        .waveform-wrapper-compact{position:relative;flex-grow:1;height:34px;cursor:pointer;min-width:100px}
+        .waveform-wrapper-compact canvas{position:absolute;top:0;left:0;width:100%;height:100%;border-radius:20px}
+        .right-controls{display:flex;align-items:center;gap:12px;flex-shrink:0}
+        .volume-controller{background:#eef2f7;border-radius:32px;display:flex;align-items:center;gap:8px;padding:4px 12px 4px 10px}
+        .volume-icon-btn{background:transparent;border:none;width:28px;height:28px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#000}
+        .volume-icon-btn svg{width:18px;height:18px;fill:currentColor}
+        .volume-slider{width:80px;height:4px;-webkit-appearance:none;background:#cbd5e1;border-radius:5px;outline:none;cursor:pointer}
+        .volume-slider::-webkit-slider-thumb{-webkit-appearance:none;width:12px;height:12px;border-radius:50%;background:#000;cursor:pointer}
+        .fullscreen-btn{background:#eef2f7;border:none;padding:10px 20px;border-radius:40px;font-size:14px;font-weight:600;cursor:pointer;color:#000;display:flex;align-items:center;gap:8px;white-space:nowrap}
+        .fullscreen-btn:hover{background:#ffcc00}
+        .skip-btn{background:none;border:none;cursor:pointer;color:#1e3a5f;padding:4px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:background 0.2s;flex-shrink:0}
+        .skip-btn:hover{background:rgba(30,58,95,0.12)}
+        .audio-time-display{font-size:11px;color:#555;white-space:nowrap;flex-shrink:0;font-variant-numeric:tabular-nums;min-width:80px}
+        .page-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;width:100%}
+        .page-tab{padding:12px 0;border-radius:40px;font-weight:700;font-size:14px;cursor:pointer;transition:all 0.25s;border:2px solid transparent;background:rgba(255,255,255,0.65);color:#5a6e82;box-shadow:0 2px 8px rgba(0,0,0,0.04);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;flex:1;text-align:center}
+        .page-tab:hover{background:#ffcc00;color:#1e3a5f;border-color:#ffcc00;transform:translateY(-2px)}
+        .page-tab.active{background:#1e3a5f;color:#fff;border-color:#1e3a5f}
+        .nav-buttons{position:fixed;bottom:24px;right:24px;display:flex;gap:10px;z-index:200}
+        .nav-btn{width:48px;height:48px;border-radius:50%;border:1px solid rgba(30,58,95,0.1);background:rgba(255,255,255,0.96);box-shadow:0 4px 16px rgba(0,0,0,0.12);cursor:pointer;display:flex;align-items:center;justify-content:center}
+        .nav-btn:hover{background:#ffcc00}
+        .nav-btn svg{width:22px;height:22px;fill:#1e3a5f}
+        .answer-status-bar{position:fixed;top:50%;left:0;transform:translateY(-50%);background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);border-radius:0 20px 20px 0;padding:12px 8px;box-shadow:4px 0 20px rgba(0,0,0,0.08);border:1px solid rgba(30,58,95,0.12);border-left:none;z-index:100;display:flex;flex-direction:column;align-items:center;gap:18px;user-select:none}
+        :fullscreen .answer-status-bar,:-webkit-full-screen .answer-status-bar,:-moz-full-screen .answer-status-bar{z-index:1000;position:fixed;left:0}
+        .answer-status-bar.fullscreen-mode{padding:16px 10px;gap:12px}
+        .answer-status-bar.fullscreen-mode .status-header{gap:8px;margin-bottom:8px;padding-bottom:12px}
+        .answer-status-bar.fullscreen-mode .status-header span:first-child{font-size:28px}
+        .answer-status-bar.fullscreen-mode .status-title{font-size:13px;letter-spacing:1px}
+        .answer-status-bar.fullscreen-mode .completed-badge{font-size:14px;padding:4px 14px;margin-top:6px}
+        .answer-status-bar.fullscreen-mode .status-grid{gap:12px}
+        .answer-status-bar.fullscreen-mode .status-item{width:56px}
+        .answer-status-bar.fullscreen-mode .status-number{width:36px;height:36px;font-size:16px}
+        .answer-status-bar.fullscreen-mode .status-label{font-size:10px}
+        .answer-status-bar.fullscreen-mode .status-footer{font-size:10px;padding-top:10px;max-width:80px}
+        .answer-status-bar.dragging-bar{box-shadow:6px 0 28px rgba(0,0,0,0.18);border-color:#ffcc00}
+        .status-header{display:flex;flex-direction:column;align-items:center;gap:4px;margin-bottom:4px;padding-bottom:6px;border-bottom:1.5px solid #e2edf2;width:100%;cursor:grab}
+        .status-header:active{cursor:grabbing}
+        .status-header span:first-child{font-size:20px}
+        .status-title{font-weight:700;font-size:11px;color:#1e3a5f}
+        .completed-badge{background:#e8f5e9;color:#2e7d32;border-radius:30px;padding:2px 8px;font-size:11px;font-weight:700}
+        .status-grid{display:flex;flex-direction:column;gap:8px;align-items:center}
+        .status-item{display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer;width:42px}
+        .status-item:hover{transform:scale(1.05)}
+        .status-number{font-size:13px;font-weight:700;width:34px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:50%}
+        .status-number.filled{background:#4caf50;color:#fff}
+        .status-number.empty{background:#ffebee;color:#c62828;border:1.5px solid #ffcdd2}
+        .status-label{font-size:8px;font-weight:600;color:#5a6e82}
+        .status-footer{margin-top:6px;font-size:8px;text-align:center;color:#8ba0b5;border-top:1px solid #eef2f7;padding-top:6px}
+        .worksheet{width:100%;background:rgba(255,255,255,0.97);border-radius:24px;box-shadow:0 20px 40px rgba(0,0,0,0.07);overflow:hidden;padding:32px 40px 48px;border:1px solid rgba(30,58,95,0.07)}
+        .header{border-bottom:3px solid #1e3a5f;margin-bottom:28px;padding-bottom:18px}
+        .title{font-size:28px;font-weight:700;color:#0b2b3f;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px}
+        .title h1{font-size:28px;font-weight:700;background:linear-gradient(135deg,#1e3a5f,#2a4d6e);-webkit-background-clip:text;background-clip:text;color:transparent}
+        .part-badge{background:#ffcc00;color:#1e3a5f;padding:6px 18px;border-radius:40px;font-weight:700;font-size:18px}
+        .sub{color:#4a627a;margin-top:8px;font-size:15px;font-weight:500;display:flex;gap:28px;flex-wrap:wrap}
+        .instructions{background:#f0f4f9;padding:14px 20px;border-radius:20px;margin:20px 0 24px 0;font-size:15px;font-weight:500;color:#1e4663;border-left:5px solid #ffcc00}
+        .one-word{background:#ffdd56;padding:4px 12px;border-radius:30px;font-family:monospace;font-weight:bold;font-size:14px;white-space:nowrap}
+        .main-title{text-align:center;margin:16px 0 28px 0}
+        .main-title h2{font-size:30px;font-weight:800;background:linear-gradient(135deg,#1e3a5f,#3b6e9e);-webkit-background-clip:text;background-clip:text;color:transparent}
+        .notes-container{display:flex;flex-direction:column;gap:32px;margin-top:12px}
+        .section-card{background:#fefefe;border-radius:28px;border:1px solid #e2edf2;overflow:hidden}
+        .section-title{background:#f8fafd;padding:16px 24px;font-size:20px;font-weight:700;color:#1f4a6e;border-bottom:2px solid #e0e9f0}
+        .section-content{padding:20px 28px 24px}
+        .bullet-item{margin-bottom:14px;font-size:16px;line-height:1.6;color:#1c2e40;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px}
+        .bullet-marker{font-weight:600;margin-right:8px;color:#1e3a5f;font-size:18px}
+        .bullet-text{flex:1;font-weight:500}
+        .number-badge{background:#eef2f7;border-radius:30px;width:30px;height:30px;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:#2c6280;margin:0 4px;flex-shrink:0}
+        /* Inputs */
+        input.answer-input{background:#fffef7;border:1.5px solid #d4dee8;border-radius:12px;padding:7px 12px;font-size:15px;font-weight:500;width:140px;font-family:'Segoe UI',monospace;color:#1f3b4c;transition:all 0.2s;display:inline-block;margin:0 3px}
+        input.answer-input.has-value{background:#e8f5e9;border-color:#4caf50;color:#2e7d32}
+        input.answer-input:focus{outline:none;border-color:#f5c542;background:#fffdf5;box-shadow:0 0 0 3px rgba(245,182,66,0.2)}
+        input.answer-input.correct-highlight{background:#c8e6c9!important;border-color:#2e7d32!important}
+        input.answer-input.incorrect-highlight{background:#ffcdd2!important;border-color:#c62828!important}
+        .map-label-input{width:60px;background:#fffef7;border:1.5px solid #d4dee8;border-radius:10px;padding:6px 10px;font-size:15px;font-weight:700;font-family:'Segoe UI',monospace;color:#1f3b4c;text-align:center;text-transform:uppercase;transition:all 0.2s;display:inline-block;margin:0 3px}
+        .map-label-input.has-value{background:#e8f5e9;border-color:#4caf50;color:#2e7d32}
+        .map-label-input:focus{outline:none;border-color:#f5c542;background:#fffdf5;box-shadow:0 0 0 3px rgba(245,182,66,0.2)}
+        .map-label-input.correct-highlight{background:#c8e6c9!important;border-color:#2e7d32!important}
+        .map-label-input.incorrect-highlight{background:#ffcdd2!important;border-color:#c62828!important}
+        /* MCQ */
+        .question-block{margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid #f0f4f9}
+        .question-block:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+        .question-number{display:inline-flex;align-items:center;justify-content:center;background:#eef2f7;border-radius:30px;width:32px;height:32px;font-weight:700;font-size:14px;color:#2c6280;margin-right:8px;flex-shrink:0}
+        .question-text{font-weight:500;font-size:16px;color:#1c2e40;margin-bottom:10px}
+        .mcq-option{display:flex;align-items:center;gap:12px;padding:10px 16px;margin-bottom:6px;border-radius:12px;cursor:pointer;transition:all 0.15s;border:1.5px solid transparent;background:#fafbfc}
+        .mcq-option:hover{background:#fef9e7;border-color:#f5c542}
+        .mcq-option.selected .mcq-radio{border-color:#ffcc00;background:#ffcc00}
+        .mcq-option.selected .mcq-radio-inner{background:white}
+        .mcq-option.correct-highlight{background:#c8e6c9!important;border-color:#2e7d32!important}
+        .mcq-option.incorrect-highlight{background:#ffcdd2!important;border-color:#c62828!important}
+        .mcq-radio{width:22px;height:22px;border-radius:50%;border:2px solid #cbd5e1;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:transparent}
+        .mcq-radio-inner{width:10px;height:10px;border-radius:50%;background:transparent}
+        .mcq-label{font-weight:500;font-size:16px;color:#1c2e40}
+        .mcq-letter{font-weight:700;color:#1e3a5f;margin-right:6px}
+        /* Two-letter checkboxes */
+        .mcq-two-letters{display:flex;flex-direction:column;gap:6px;margin:10px 0}
+        .mcq-checkbox{display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:10px;cursor:pointer;transition:all 0.15s;border:1.5px solid #d4dee8;background:#fafbfc;max-width:500px}
+        .mcq-checkbox:hover{border-color:#f5c542;background:#fef9e7}
+        .mcq-checkbox.selected{background:#fff8e1;border-color:#ffcc00}
+        .mcq-checkbox .check-box{width:18px;height:18px;border-radius:4px;border:2px solid #cbd5e1;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+        .mcq-checkbox.selected .check-box{background:#ffcc00;border-color:#ffcc00}
+        .mcq-checkbox.selected .check-box::after{content:'✓';color:#fff;font-size:12px;font-weight:bold}
+        .mcq-checkbox.correct-highlight{background:#c8e6c9!important;border-color:#2e7d32!important}
+        .mcq-checkbox.incorrect-highlight{background:#ffcdd2!important;border-color:#c62828!important}
+        /* Floor plan box */
+        .floorplan-box{background:#f8fafd;border:1.5px solid #d4dee8;border-radius:16px;padding:20px;margin:16px 0;font-family:monospace;font-size:13px;color:#1c2e40}
+        .floorplan-box pre{line-height:1.8;white-space:pre-wrap}
+        .legend-box{background:#f0f4f9;border-radius:16px;padding:16px 20px;margin-top:16px;border:1px solid #d4dee8}
+        .legend-box .legend-title{font-weight:700;color:#1e3a5f;margin-bottom:10px;font-size:15px}
+        .legend-item{display:flex;align-items:center;gap:8px;padding:4px 0;font-size:14px;font-weight:500;color:#1c2e40}
+        .legend-letter{font-weight:700;color:#1e3a5f;width:20px}
+        .map-q-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #f0f4f9;font-size:15px;font-weight:500;color:#1c2e40}
+        .map-q-row:last-child{border-bottom:none}
+        .map-q-num{font-weight:700;color:#1e3a5f;min-width:34px}
+        /* Action */
+        .action-buttons{margin-top:40px;display:flex;justify-content:space-between;align-items:center;gap:18px;border-top:1px solid #e2edf2;padding-top:28px;flex-wrap:wrap}
+        .action-buttons .left-group{display:flex;align-items:center;gap:12px}
+        .action-buttons .right-group{display:flex;gap:18px}
+        .telegram-link{display:flex;align-items:center;gap:8px;background:#e8f0fc;color:#1e3a5f;padding:10px 20px;border-radius:40px;font-weight:600;font-size:14px;text-decoration:none;border:1px solid rgba(30,58,95,0.12)}
+        .telegram-link:hover{background:#1e3a5f;color:white}
+        .telegram-link svg{width:20px;height:20px;fill:currentColor}
+        .btn{border:none;background:#eef2f7;padding:10px 24px;border-radius:40px;font-weight:600;font-size:14px;cursor:pointer;color:#2a577b}
+        .btn-primary{background:#ffcc00;color:#000}
+        .btn-primary:hover{background:#0f2c48;color:white}
+        .btn:hover{background:#e2e8f0}
+        .worksheet-page{display:none}
+        .worksheet-page.active{display:block}
+        .modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;z-index:1000}
+        .modal-content{background:white;border-radius:28px;max-width:550px;width:90%;padding:28px;box-shadow:0 20px 35px rgba(0,0,0,0.2);text-align:center}
+        .modal-content h3{font-size:26px;margin-bottom:16px;color:#1e3a5f}
+        .score-details{background:#f8fafd;border-radius:20px;padding:16px;margin:20px 0;max-height:350px;overflow-y:auto;text-align:left}
+        .score-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #e2e8f0;font-size:14px;flex-wrap:wrap;gap:4px}
+        .score-row.correct{color:#2e7d32}
+        .score-row.incorrect{color:#c62828}
+        .modal-close{background:#1e3a5f;color:white;border:none;padding:10px 24px;border-radius:40px;font-weight:600;cursor:pointer;margin-top:8px}
+        @media(max-width:750px){.worksheet{padding:20px 16px 32px}.action-buttons{flex-direction:column;align-items:stretch}.action-buttons .left-group,.action-buttons .right-group{justify-content:center}.btn{padding:8px 16px;font-size:13px}input.answer-input{width:110px;font-size:14px}.bullet-item{flex-direction:column;margin-bottom:20px}}
+    </style>
+</head>
+<body>
+<div class="botanical-background"><div class="vein-lines"></div><div class="leaf-whispers"></div><div class="floating-spores"></div><div class="marble-flow"></div><div class="ripple-rings"></div><div class="soft-vignette"></div></div>
+
+<div class="answer-status-bar" id="answerStatusBar">
+    <div class="status-header"><span>📝</span><div class="status-title">ANSWERS</div><div class="completed-badge" id="completedCountBadge">0/10</div></div>
+    <div class="status-grid" id="statusGrid"></div>
+    <div class="status-footer">click to jump</div>
+</div>
+
+<div class="nav-buttons">
+    <button class="nav-btn" id="prevBtn"><svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg></button>
+    <button class="nav-btn" id="nextBtn"><svg viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/></svg></button>
+</div>
+
+<div class="main-container">
+    <div class="sticky-top-bar">
+        <div class="top-bar">
+            <div class="logo-area">
+                <img src="https://i.postimg.cc/L4VR0pK6/Loggg.jpg" alt="Logo" class="logo-img" onerror="this.style.display='none'">
+                <div class="logo-text">Elites Learning Center</div>
+            </div>
+            <div class="waveform-player-compact" id="waveformPlayerCompact">
+                <button class="skip-btn" id="skipBackBtn" title="-10s"><svg viewBox="0 0 24 24" width="20" height="20" fill="#1e3a5f"><path d="M11.99 5V1l-5 5 5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6h-2c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/></svg></button>
+                <button class="waveform-play-btn" id="waveformPlayBtn"><svg id="waveformIcon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+                <button class="skip-btn" id="skipFwdBtn" title="+10s"><svg viewBox="0 0 24 24" width="20" height="20" fill="#1e3a5f"><path d="M12.01 5V1l5 5-5 5V7c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6h2c0 4.42-3.58 8-8 8s-8-3.58-8-8 3.58-8 8-8z"/></svg></button>
+                <div class="waveform-wrapper-compact" id="waveformContainerCompact"><canvas id="bgCanvasCompact"></canvas><canvas id="progressCanvasCompact"></canvas></div>
+                <span class="audio-time-display" id="audioTimeDisplay">0:00 / 0:00</span>
+            </div>
+            <div class="right-controls">
+                <div class="volume-controller">
+                    <button class="volume-icon-btn" id="volumeMuteBtn"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
+                    <input type="range" id="volumeSlider" class="volume-slider" min="0" max="100" value="70" step="1">
+                </div>
+                <button class="fullscreen-btn" id="fullscreenBtn"><span>⛶</span> <span id="fsText">Full Screen</span></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-tabs">
+        <button class="page-tab active" data-page="1">Part 1</button>
+        <button class="page-tab" data-page="2">Part 2</button>
+        <button class="page-tab" data-page="3">Part 3</button>
+        <button class="page-tab" data-page="4">Part 4</button>
+    </div>
+
+    <!-- ===== PAGE 1: Sharing House ===== -->
+    <div class="worksheet-page active" id="page1">
+        <div class="worksheet">
+            <div class="header">
+                <div class="title"><h1>Listening</h1><div class="part-badge">PART 1</div></div>
+                <div class="sub"><span>📋 Questions 1–10</span><span>✍️ Complete the notes below.</span><span>🔤 Write <strong>NO MORE THAN THREE WORDS AND/OR A NUMBER</strong></span></div>
+            </div>
+            <div class="instructions"><p><span>📢</span> Complete the notes below. Write <strong class="one-word">NO MORE THAN THREE WORDS AND/OR A NUMBER</strong> for each answer.</p></div>
+            <div class="main-title"><h2>Sharing House</h2></div>
+            <div class="notes-container">
+                <div class="section-card">
+                    <div class="section-content">
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">Jim's weekly rent will be $ <span class="number-badge">1</span><input type="text" class="answer-input p1-input" id="p1_ans1" placeholder="Answer" maxlength="30" autocomplete="off"></span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">Jim can park his car in the <span class="number-badge">2</span><input type="text" class="answer-input p1-input" id="p1_ans2" placeholder="Answer" maxlength="30" autocomplete="off"></span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">The telephone is in the <span class="number-badge">3</span><input type="text" class="answer-input p1-input" id="p1_ans3" placeholder="Answer" maxlength="30" autocomplete="off"></span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">Jim will bring a <span class="number-badge">4</span><input type="text" class="answer-input p1-input" id="p1_ans4" placeholder="Answer" maxlength="30" autocomplete="off"> for his bedroom.</span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">Peter would like Jim to bring a <span class="number-badge">5</span><input type="text" class="answer-input p1-input" id="p1_ans5" placeholder="Answer" maxlength="30" autocomplete="off"></span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">Peter and Jim will probably watch TV on <span class="number-badge">6</span><input type="text" class="answer-input p1-input" id="p1_ans6" placeholder="Answer" maxlength="30" autocomplete="off"></span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">Jim works in a <span class="number-badge">7</span><input type="text" class="answer-input p1-input" id="p1_ans7" placeholder="Answer" maxlength="30" autocomplete="off"> twice a week.</span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">Peter will share the cost of <span class="number-badge">8</span><input type="text" class="answer-input p1-input" id="p1_ans8" placeholder="Answer" maxlength="30" autocomplete="off"> with Jim.</span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">Peter wants Jim to move in by <span class="number-badge">9</span><input type="text" class="answer-input p1-input" id="p1_ans9" placeholder="Answer" maxlength="30" autocomplete="off"></span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">Jim agrees to move in after his <span class="number-badge">10</span><input type="text" class="answer-input p1-input" id="p1_ans10" placeholder="Answer" maxlength="30" autocomplete="off"></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <div class="left-group"><a href="https://t.me/Elites_LC" class="telegram-link" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.05-.2-.07-.05-.17-.03-.25-.02-.11.02-1.84 1.17-5.2 3.44-.49.34-.94.5-1.34.49-.44-.01-1.29-.25-1.92-.46-.77-.25-1.39-.38-1.33-.81.03-.22.33-.45 1.13-.68 4.45-1.94 7.42-3.22 8.9-3.83.24-.1.56-.22.77-.22.14 0 .38.06.38.34 0 .06-.01.13-.03.19z"/></svg>Telegram</a></div>
+                <div class="right-group"><button class="btn clear-btn" data-page="1">🗑️ Clear all answers</button><button class="btn btn-primary check-btn" data-page="1">✅ Check / Submit Answers</button></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== PAGE 2: Spring Down Junior School ===== -->
+    <div class="worksheet-page" id="page2">
+        <div class="worksheet">
+            <div class="header">
+                <div class="title"><h1>Listening</h1><div class="part-badge">PART 2</div></div>
+                <div class="sub"><span>📋 Questions 11–20</span><span>✍️ Questions 11–17: Note Completion</span><span>🗺️ Questions 18–20: Map Labelling</span></div>
+            </div>
+            <div class="instructions"><p><span>📢</span> Write <strong class="one-word">NO MORE THAN TWO WORDS AND/OR A NUMBER</strong> for Questions 11–17. Write letter <strong>A–H</strong> for Questions 18–20.</p></div>
+            <div class="main-title"><h2>Spring Down Junior School</h2></div>
+            <div class="notes-container">
+                <div class="section-card">
+                    <div class="section-title">Questions 11–17 </div>
+                    <div class="section-content">
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">The school day starts at <span class="number-badge">11</span><input type="text" class="answer-input p2-input" id="p2_ans11" placeholder="Answer" maxlength="30" autocomplete="off"> with registration, and finishes at 4 p.m.</span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">The school canteen offers a <span class="number-badge">12</span><input type="text" class="answer-input p2-input" id="p2_ans12" placeholder="Answer" maxlength="30" autocomplete="off"> for lunch.</span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">The morning and afternoon breaks each last for <span class="number-badge">13</span><input type="text" class="answer-input p2-input" id="p2_ans13" placeholder="Answer" maxlength="30" autocomplete="off"></span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">On Thursday afternoons all children must take part in <span class="number-badge">14</span><input type="text" class="answer-input p2-input" id="p2_ans14" placeholder="Answer" maxlength="30" autocomplete="off"></span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">Every term the children do a special <span class="number-badge">15</span><input type="text" class="answer-input p2-input" id="p2_ans15" placeholder="Answer" maxlength="30" autocomplete="off"></span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">The children are given tests each <span class="number-badge">16</span><input type="text" class="answer-input p2-input" id="p2_ans16" placeholder="Answer" maxlength="30" autocomplete="off"></span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">The children can go to <span class="number-badge">17</span><input type="text" class="answer-input p2-input" id="p2_ans17" placeholder="Answer" maxlength="30" autocomplete="off"> after school to learn new skills such as music.</span></div>
+                    </div>
+                </div>
+                <div class="section-card">
+                    <div class="section-title">🗺️ Map Labelling Questions 18-20</div>
+                    <div class="section-content">
+                        <p style="margin-bottom:16px;color:#4a627a;font-weight:500;">Label the map below. Write the correct letter <strong>A–H</strong> next to questions 18–20.</p>
+                        <div style="width:100%;border-radius:16px;overflow:hidden;border:1.5px solid #d4dee8;margin-bottom:20px;">
+                            <img src="data:image/png;base64,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" alt="Spring Down Junior School Floor Plan" style="width:100%;display:block;">
+                        </div>
+                        <!-- Below box: Q18-20 left, legend right -->
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;background:#f8fafd;border:1.5px solid #d4dee8;border-radius:16px;padding:20px;">
+                            <!-- Left: Questions -->
+                            <div>
+                                <div style="font-weight:700;color:#1e3a5f;margin-bottom:14px;font-size:14px;padding-bottom:8px;border-bottom:2px solid #ffcc00;display:inline-block;">📌 Questions</div>
+                                <div style="display:flex;flex-direction:column;gap:12px;margin-top:12px;">
+                                    <div style="display:flex;align-items:center;gap:12px;">
+                                        <span style="font-weight:700;color:#1e3a5f;font-size:15px;min-width:28px;">18</span>
+                                        <input type="text" class="map-label-input p2-map-input" id="p2_ans18" maxlength="1" placeholder="A-H" autocomplete="off">
+                                    </div>
+                                    <div style="display:flex;align-items:center;gap:12px;">
+                                        <span style="font-weight:700;color:#1e3a5f;font-size:15px;min-width:28px;">19</span>
+                                        <input type="text" class="map-label-input p2-map-input" id="p2_ans19" maxlength="1" placeholder="A-H" autocomplete="off">
+                                    </div>
+                                    <div style="display:flex;align-items:center;gap:12px;">
+                                        <span style="font-weight:700;color:#1e3a5f;font-size:15px;min-width:28px;">20</span>
+                                        <input type="text" class="map-label-input p2-map-input" id="p2_ans20" maxlength="1" placeholder="A-H" autocomplete="off">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Right: Legend -->
+                            <div>
+                                <div style="font-weight:700;color:#1e3a5f;margin-bottom:14px;font-size:14px;padding-bottom:8px;border-bottom:2px solid #ffcc00;display:inline-block;">🔑 Options</div>
+                                <div style="display:flex;flex-direction:column;gap:7px;margin-top:12px;">
+                                    <div style="display:flex;gap:10px;font-size:14px;font-weight:500;color:#1c2e40;"><span style="font-weight:700;color:#1e3a5f;width:16px;">A</span> Assembly hall</div>
+                                    <div style="display:flex;gap:10px;font-size:14px;font-weight:500;color:#1c2e40;"><span style="font-weight:700;color:#1e3a5f;width:16px;">B</span> Computer room</div>
+                                    <div style="display:flex;gap:10px;font-size:14px;font-weight:500;color:#1c2e40;"><span style="font-weight:700;color:#1e3a5f;width:16px;">C</span> Gym</div>
+                                    <div style="display:flex;gap:10px;font-size:14px;font-weight:500;color:#1c2e40;"><span style="font-weight:700;color:#1e3a5f;width:16px;">D</span> Head's office</div>
+                                    <div style="display:flex;gap:10px;font-size:14px;font-weight:500;color:#1c2e40;"><span style="font-weight:700;color:#1e3a5f;width:16px;">E</span> Music room</div>
+                                    <div style="display:flex;gap:10px;font-size:14px;font-weight:500;color:#1c2e40;"><span style="font-weight:700;color:#1e3a5f;width:16px;">F</span> Reception</div>
+                                    <div style="display:flex;gap:10px;font-size:14px;font-weight:500;color:#1c2e40;"><span style="font-weight:700;color:#1e3a5f;width:16px;">G</span> Cloak room</div>
+                                    <div style="display:flex;gap:10px;font-size:14px;font-weight:500;color:#1c2e40;"><span style="font-weight:700;color:#1e3a5f;width:16px;">H</span> Lunch canteen</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <div class="left-group"><a href="https://t.me/Elites_LC" class="telegram-link" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.05-.2-.07-.05-.17-.03-.25-.02-.11.02-1.84 1.17-5.2 3.44-.49.34-.94.5-1.34.49-.44-.01-1.29-.25-1.92-.46-.77-.25-1.39-.38-1.33-.81.03-.22.33-.45 1.13-.68 4.45-1.94 7.42-3.22 8.9-3.83.24-.1.56-.22.77-.22.14 0 .38.06.38.34 0 .06-.01.13-.03.19z"/></svg>Telegram</a></div>
+                <div class="right-group"><button class="btn clear-btn" data-page="2">🗑️ Clear all answers</button><button class="btn btn-primary check-btn" data-page="2">✅ Check / Submit Answers</button></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== PAGE 3: Forensic Linguistics ===== -->
+    <div class="worksheet-page" id="page3">
+        <div class="worksheet">
+            <div class="header">
+                <div class="title"><h1>Listening</h1><div class="part-badge">PART 3</div></div>
+                <div class="sub"><span>📋 Questions 21–30</span><span>📝 Questions 21–24: MCQ</span><span>✅ Questions 25–30: Choose TWO letters</span></div>
+            </div>
+            <div class="instructions"><p><span>📢</span> Choose the correct letter <strong>A, B or C</strong> for Questions 21–24. Choose <strong>TWO</strong> letters A–E for Questions 25–30.</p></div>
+            <div class="main-title"><h2>Forensic Linguistics</h2></div>
+            <div class="notes-container">
+                <div class="section-card">
+                    <div class="section-title">📝 Choose the correct letter, A, B or C for questions 21-24</div>
+                    <div class="section-content" id="mcqSection3">
+                        <div class="question-block" id="q21Block">
+                            <div class="question-text"><span class="question-number">21</span> What do the students agree about defining forensic linguistics?</div>
+                            <div class="mcq-option" data-q="21" data-value="A"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><span class="mcq-label"><span class="mcq-letter">A</span> The dictionary definition was not very useful.</span></div>
+                            <div class="mcq-option" data-q="21" data-value="B"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><span class="mcq-label"><span class="mcq-letter">B</span> They could provide an example of the kind of work involved.</span></div>
+                            <div class="mcq-option" data-q="21" data-value="C"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><span class="mcq-label"><span class="mcq-letter">C</span> They should read about the subject to see how it is described.</span></div>
+                        </div>
+                        <div class="question-block" id="q22Block">
+                            <div class="question-text"><span class="question-number">22</span> Jen thinks it will be difficult to analyze the voice recording because …</div>
+                            <div class="mcq-option" data-q="22" data-value="A"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><span class="mcq-label"><span class="mcq-letter">A</span> it is not of good quality.</span></div>
+                            <div class="mcq-option" data-q="22" data-value="B"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><span class="mcq-label"><span class="mcq-letter">B</span> the accent is difficult to understand.</span></div>
+                            <div class="mcq-option" data-q="22" data-value="C"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><span class="mcq-label"><span class="mcq-letter">C</span> she doesn't know if the speaker is male or female.</span></div>
+                        </div>
+                        <div class="question-block" id="q23Block">
+                            <div class="question-text"><span class="question-number">23</span> Why does Jen think that the 'suspect' might vary their voice patterns?</div>
+                            <div class="mcq-option" data-q="23" data-value="A"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><span class="mcq-label"><span class="mcq-letter">A</span> because they're being recorded.</span></div>
+                            <div class="mcq-option" data-q="23" data-value="B"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><span class="mcq-label"><span class="mcq-letter">B</span> because they've been told to.</span></div>
+                            <div class="mcq-option" data-q="23" data-value="C"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><span class="mcq-label"><span class="mcq-letter">C</span> because they feel uncomfortable about their accent.</span></div>
+                        </div>
+                        <div class="question-block" id="q24Block">
+                            <div class="question-text"><span class="question-number">24</span> What does Rob think about Jen's approach to study?</div>
+                            <div class="mcq-option" data-q="24" data-value="A"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><span class="mcq-label"><span class="mcq-letter">A</span> She worries too much about her ability.</span></div>
+                            <div class="mcq-option" data-q="24" data-value="B"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><span class="mcq-label"><span class="mcq-letter">B</span> She often ignores the most important issues.</span></div>
+                            <div class="mcq-option" data-q="24" data-value="C"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><span class="mcq-label"><span class="mcq-letter">C</span> She has trouble getting started.</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-card">
+                    <div class="section-title">✅ Choose <strong>TWO</strong> letters A–E for questions 25–26</div>
+                    <div class="section-content">
+                        <p style="margin-bottom:12px;font-weight:500;color:#1c2e40;">Which <strong>TWO</strong> books do Jen and Rob decide to get from the library?</p>
+                        <div class="mcq-two-letters" id="twoLetters2526">
+                            <div class="mcq-checkbox" data-group="2526" data-value="A"><div class="check-box"></div><span class="mcq-label"><span class="mcq-letter">A</span> Voice Identification</span></div>
+                            <div class="mcq-checkbox" data-group="2526" data-value="B"><div class="check-box"></div><span class="mcq-label"><span class="mcq-letter">B</span> Modern Forensic Techniques</span></div>
+                            <div class="mcq-checkbox" data-group="2526" data-value="C"><div class="check-box"></div><span class="mcq-label"><span class="mcq-letter">C</span> Language and Crime</span></div>
+                            <div class="mcq-checkbox" data-group="2526" data-value="D"><div class="check-box"></div><span class="mcq-label"><span class="mcq-letter">D</span> Forensics Today</span></div>
+                            <div class="mcq-checkbox" data-group="2526" data-value="E"><div class="check-box"></div><span class="mcq-label"><span class="mcq-letter">E</span> Research Methods in Forensic Linguistics</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-card">
+                    <div class="section-title">✅ Choose <strong>TWO</strong> letters A–E for questions 27–28</div>
+                    <div class="section-content">
+                        <p style="margin-bottom:12px;font-weight:500;color:#1c2e40;">Which <strong>TWO</strong> practical considerations are both Jen and Rob concerned about?</p>
+                        <div class="mcq-two-letters" id="twoLetters2728">
+                            <div class="mcq-checkbox" data-group="2728" data-value="A"><div class="check-box"></div><span class="mcq-label"><span class="mcq-letter">A</span> how much time they have for writing up the project</span></div>
+                            <div class="mcq-checkbox" data-group="2728" data-value="B"><div class="check-box"></div><span class="mcq-label"><span class="mcq-letter">B</span> being able to do enough research</span></div>
+                            <div class="mcq-checkbox" data-group="2728" data-value="C"><div class="check-box"></div><span class="mcq-label"><span class="mcq-letter">C</span> only speaking to the 'suspect' once</span></div>
+                            <div class="mcq-checkbox" data-group="2728" data-value="D"><div class="check-box"></div><span class="mcq-label"><span class="mcq-letter">D</span> using recording equipment</span></div>
+                            <div class="mcq-checkbox" data-group="2728" data-value="E"><div class="check-box"></div><span class="mcq-label"><span class="mcq-letter">E</span> how easy it will be to contact the 'suspect'</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-card">
+                    <div class="section-title">✅ Choose <strong>TWO</strong> letters A–E for questions 29–30</div>
+                    <div class="section-content">
+                        <p style="margin-bottom:12px;font-weight:500;color:#1c2e40;">Which <strong>TWO</strong> sections of the project will Rob write alone?</p>
+                        <div class="mcq-two-letters" id="twoLetters2930">
+                            <div class="mcq-checkbox" data-group="2930" data-value="A"><div class="check-box"></div><span class="mcq-label"><span class="mcq-letter">A</span> Methodology</span></div>
+                            <div class="mcq-checkbox" data-group="2930" data-value="B"><div class="check-box"></div><span class="mcq-label"><span class="mcq-letter">B</span> Literature review</span></div>
+                            <div class="mcq-checkbox" data-group="2930" data-value="C"><div class="check-box"></div><span class="mcq-label"><span class="mcq-letter">C</span> Introduction</span></div>
+                            <div class="mcq-checkbox" data-group="2930" data-value="D"><div class="check-box"></div><span class="mcq-label"><span class="mcq-letter">D</span> Analysis</span></div>
+                            <div class="mcq-checkbox" data-group="2930" data-value="E"><div class="check-box"></div><span class="mcq-label"><span class="mcq-letter">E</span> Discussion and conclusions</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <div class="left-group"><a href="https://t.me/Elites_LC" class="telegram-link" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.05-.2-.07-.05-.17-.03-.25-.02-.11.02-1.84 1.17-5.2 3.44-.49.34-.94.5-1.34.49-.44-.01-1.29-.25-1.92-.46-.77-.25-1.39-.38-1.33-.81.03-.22.33-.45 1.13-.68 4.45-1.94 7.42-3.22 8.9-3.83.24-.1.56-.22.77-.22.14 0 .38.06.38.34 0 .06-.01.13-.03.19z"/></svg>Telegram</a></div>
+                <div class="right-group"><button class="btn clear-btn" data-page="3">🗑️ Clear all answers</button><button class="btn btn-primary check-btn" data-page="3">✅ Check / Submit Answers</button></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== PAGE 4: Dormancy ===== -->
+    <div class="worksheet-page" id="page4">
+        <div class="worksheet">
+            <div class="header">
+                <div class="title"><h1>Listening</h1><div class="part-badge">PART 4</div></div>
+                <div class="sub"><span>📋 Questions 31–40</span><span>✍️ Complete the notes below.</span><span>🔤 Write <strong>ONE WORD ONLY</strong> for each answer.</span></div>
+            </div>
+            <div class="instructions"><p><span>📢</span> Complete the notes below. Write <strong class="one-word">ONE WORD ONLY</strong> for each answer.</p></div>
+            <div class="main-title"><h2>Dormancy</h2></div>
+            <div class="notes-container">
+                <div class="section-card">
+                    <div class="section-title">Organisms enter dormancy to:</div>
+                    <div class="section-content">
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">save available <span class="number-badge">31</span><input type="text" class="answer-input p4-input" id="p4_ans31" placeholder="Answer" maxlength="30" autocomplete="off"></span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">reduce demands on their environment</span></div>
+                    </div>
+                </div>
+                <div class="section-card">
+                    <div class="section-title">Value of dormancy</div>
+                    <div class="section-content">
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">can live in conditions which are environmentally <span class="number-badge">32</span><input type="text" class="answer-input p4-input" id="p4_ans32" placeholder="Answer" maxlength="30" autocomplete="off"></span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">can live in a wider range of places</span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">have less <span class="number-badge">33</span><input type="text" class="answer-input p4-input" id="p4_ans33" placeholder="Answer" maxlength="30" autocomplete="off"> from other animals</span></div>
+                    </div>
+                </div>
+                <div class="section-card">
+                    <div class="section-title">Causes of dormancy</div>
+                    <div class="section-content">
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">changes in temperature and <span class="number-badge">34</span><input type="text" class="answer-input p4-input" id="p4_ans34" placeholder="Answer" maxlength="30" autocomplete="off"></span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">availability of food, water, oxygen</span></div>
+                    </div>
+                </div>
+                <div class="section-card">
+                    <div class="section-title">Dormancy in insects</div>
+                    <div class="section-content">
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">There may be a <span class="number-badge">35</span><input type="text" class="answer-input p4-input" id="p4_ans35" placeholder="Answer" maxlength="30" autocomplete="off"> in their metabolism (diapause)</span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">Diapause occurs during extreme conditions, or as part of the life cycle</span></div>
+                    </div>
+                </div>
+                <div class="section-card">
+                    <div class="section-title">The African lungfish</div>
+                    <div class="section-content">
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">It buries itself in the <span class="number-badge">36</span><input type="text" class="answer-input p4-input" id="p4_ans36" placeholder="Answer" maxlength="30" autocomplete="off"> and creates a slimy cocoon</span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">Two dangers: <span class="number-badge">37</span><input type="text" class="answer-input p4-input" id="p4_ans37" placeholder="Answer" maxlength="30" autocomplete="off"> and desiccation</span></div>
+                    </div>
+                </div>
+                <div class="section-card">
+                    <div class="section-title">Snails</div>
+                    <div class="section-content">
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">Some close their shells with a membrane during dormancy</span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">Light-coloured shells reflect sunlight and limit <span class="number-badge">38</span><input type="text" class="answer-input p4-input" id="p4_ans38" placeholder="Answer" maxlength="30" autocomplete="off"></span></div>
+                    </div>
+                </div>
+                <div class="section-card">
+                    <div class="section-title">The Arctic ground squirrel</div>
+                    <div class="section-content">
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">It hibernates in an insulated, underground <span class="number-badge">39</span><input type="text" class="answer-input p4-input" id="p4_ans39" placeholder="Answer" maxlength="30" autocomplete="off"></span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">It loses 40% of its weight during hibernation</span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">When it wakes up, the first part of the body to heat up is the <span class="number-badge">40</span><input type="text" class="answer-input p4-input" id="p4_ans40" placeholder="Answer" maxlength="30" autocomplete="off"></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <div class="left-group"><a href="https://t.me/Elites_LC" class="telegram-link" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.05-.2-.07-.05-.17-.03-.25-.02-.11.02-1.84 1.17-5.2 3.44-.49.34-.94.5-1.34.49-.44-.01-1.29-.25-1.92-.46-.77-.25-1.39-.38-1.33-.81.03-.22.33-.45 1.13-.68 4.45-1.94 7.42-3.22 8.9-3.83.24-.1.56-.22.77-.22.14 0 .38.06.38.34 0 .06-.01.13-.03.19z"/></svg>Telegram</a></div>
+                <div class="right-group"><button class="btn clear-btn" data-page="4">🗑️ Clear all answers</button><button class="btn btn-primary check-btn" data-page="4">✅ Check / Submit Answers</button></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// ===== ANSWER KEYS =====
+const answerKeys = {
+    1:{1:"80",2:"garage",3:"kitchen",4:"heater",5:"toaster",6:"friday evening",7:"supermarket",8:"petrol",9:"1 june",10:"exam"},
+    2:{11:"8:55",12:"hot meal",13:"15 minutes",14:"sports",15:"poster",16:"month",17:"clubs",18:"D",19:"E",20:"C"},
+    3:{21:"B",22:"A",23:"B",24:"A",25:"B,E",26:"",27:"A,D",28:"",29:"C,E",30:""},
+    4:{31:"resources",32:"stressful",33:"competition",34:"light",35:"reduction",36:"mud",37:"starvation",38:"evaporation",39:"nest",40:"heart"}
+};
+
+let currentPage=1; const totalPages=4;
+
+// Input refs
+const p1Inputs={},p2Inputs={},p2MapInputs={},p4Inputs={};
+for(let i=1;i<=10;i++) p1Inputs[i]=document.getElementById('p1_ans'+i);
+for(let i=11;i<=17;i++) p2Inputs[i]=document.getElementById('p2_ans'+i);
+// Map inputs: 18 is inside SVG, 19 and 20 are also SVG foreignObject
+// We resolve them after DOM is ready
+for(let i=31;i<=40;i++) p4Inputs[i]=document.getElementById('p4_ans'+i);
+
+// Two-letter state
+const sel2526=[],sel2728=[],sel2930=[];
+const twoLetterMap={'2526':sel2526,'2728':sel2728,'2930':sel2930};
+
+// Page switching
+function switchPage(p){
+    if(p<1||p>totalPages)return;
+    currentPage=p;
+    document.querySelectorAll('.page-tab').forEach(t=>t.classList.remove('active'));
+    document.querySelector('.page-tab[data-page="'+p+'"]').classList.add('active');
+    document.querySelectorAll('.worksheet-page').forEach(pg=>pg.classList.remove('active'));
+    document.getElementById('page'+p).classList.add('active');
+    updateAnswerStatusBar();
+    window.scrollTo({top:0,behavior:'smooth'});
+}
+document.querySelectorAll('.page-tab').forEach(tab=>tab.addEventListener('click',function(){switchPage(parseInt(this.getAttribute('data-page')));}));
+document.getElementById('prevBtn').addEventListener('click',()=>{if(currentPage>1)switchPage(currentPage-1);});
+document.getElementById('nextBtn').addEventListener('click',()=>{if(currentPage<totalPages)switchPage(currentPage+1);});
+
+// Get answer value
+function getAnswerValue(q){
+    if(currentPage===1){const i=p1Inputs[q];return i?i.value.trim().toLowerCase():'';}
+    if(currentPage===2){
+        if(q<=17){const i=p2Inputs[q];return i?i.value.trim().toLowerCase():'';}
+        const i=p2MapInputs[q];return i?i.value.trim().toUpperCase():'';
+    }
+    if(currentPage===3){
+        if(q<=24){const b=document.getElementById('q'+q+'Block');const s=b?.querySelector('.mcq-option.selected');return s?s.getAttribute('data-value'):'';}
+        if(q===25||q===26){return sel2526.slice().sort().join(',');}
+        if(q===27||q===28){return sel2728.slice().sort().join(',');}
+        if(q===29||q===30){return sel2930.slice().sort().join(',');}
+    }
+    if(currentPage===4){const i=p4Inputs[q];return i?i.value.trim().toLowerCase():'';}
+    return '';
+}
+
+function isFilled(q){
+    if(currentPage===3&&(q===25||q===26))return sel2526.length===2;
+    if(currentPage===3&&(q===27||q===28))return sel2728.length===2;
+    if(currentPage===3&&(q===29||q===30))return sel2930.length===2;
+    return getAnswerValue(q)!=='';
+}
+
+// Status bar
+function updateAnswerStatusBar(){
+    const sg=document.getElementById('statusGrid');if(!sg)return;
+    let fc=0,h='';const r={1:[1,10],2:[11,20],3:[21,30],4:[31,40]};const[s,e]=r[currentPage];
+    for(let i=s;i<=e;i++){const f=isFilled(i);if(f)fc++;h+='<div class="status-item" data-qnum="'+i+'"><div class="status-number '+(f?'filled':'empty')+'">'+i+'</div><div class="status-label">Q'+i+'</div></div>';}
+    sg.innerHTML=h;document.getElementById('completedCountBadge').innerText=fc+'/10';
+    document.querySelectorAll('.status-item').forEach(item=>item.addEventListener('click',function(){jumpToQuestion(parseInt(this.getAttribute('data-qnum')));}));
+}
+function jumpToQuestion(q){
+    let tp=q<=10?1:q<=20?2:q<=30?3:4;
+    if(currentPage!==tp)switchPage(tp);
+    setTimeout(()=>{
+        if(tp===1){const i=p1Inputs[q];if(i){i.focus();i.scrollIntoView({behavior:'smooth',block:'center'});}}
+        else if(tp===2){if(q<=17){const i=p2Inputs[q];if(i){i.focus();i.scrollIntoView({behavior:'smooth',block:'center'});}}else{const i=p2MapInputs[q];if(i){i.focus();i.scrollIntoView({behavior:'smooth',block:'center'});}}}
+        else if(tp===3){if(q<=24)document.getElementById('q'+q+'Block')?.scrollIntoView({behavior:'smooth',block:'center'});else if(q<=26)document.getElementById('twoLetters2526')?.scrollIntoView({behavior:'smooth',block:'center'});else if(q<=28)document.getElementById('twoLetters2728')?.scrollIntoView({behavior:'smooth',block:'center'});else document.getElementById('twoLetters2930')?.scrollIntoView({behavior:'smooth',block:'center'});}
+        else{const i=p4Inputs[q];if(i){i.focus();i.scrollIntoView({behavior:'smooth',block:'center'});}}
+    },100);
+}
+function refreshStatusBar(){updateAnswerStatusBar();updateInputStyles();}
+function updateInputStyles(){
+    const pages={1:[p1Inputs,1,10],2:[p2Inputs,11,17],4:[p4Inputs,31,40]};
+    if(pages[currentPage]){const[obj,s,e]=pages[currentPage];for(let i=s;i<=e;i++){const inp=obj[i];if(inp)inp.classList.toggle('has-value',inp.value.trim()!=='');}}
+    if(currentPage===2){for(let i=18;i<=20;i++){const inp=p2MapInputs[i];if(inp)inp.classList.toggle('has-value',inp.value.trim()!=='');}}
+}
+
+// Clear
+function clearPage(pn){
+    if(!confirm('Clear all answers on this page?'))return;
+    if(pn===1){for(let i=1;i<=10;i++){if(p1Inputs[i]){p1Inputs[i].value='';p1Inputs[i].classList.remove('has-value','correct-highlight','incorrect-highlight');}}}
+    else if(pn===2){for(let i=11;i<=17;i++){if(p2Inputs[i]){p2Inputs[i].value='';p2Inputs[i].classList.remove('has-value','correct-highlight','incorrect-highlight');}}for(let i=18;i<=20;i++){if(p2MapInputs[i]){p2MapInputs[i].value='';p2MapInputs[i].classList.remove('has-value','correct-highlight','incorrect-highlight');}}}
+    else if(pn===3){for(let i=21;i<=24;i++){const b=document.getElementById('q'+i+'Block');b?.querySelectorAll('.mcq-option').forEach(o=>o.classList.remove('selected','correct-highlight','incorrect-highlight'));}sel2526.length=0;sel2728.length=0;sel2930.length=0;document.querySelectorAll('.mcq-checkbox').forEach(cb=>cb.classList.remove('selected','correct-highlight','incorrect-highlight'));}
+    else if(pn===4){for(let i=31;i<=40;i++){if(p4Inputs[i]){p4Inputs[i].value='';p4Inputs[i].classList.remove('has-value','correct-highlight','incorrect-highlight');}}}
+    refreshStatusBar();
+}
+
+// Check
+function checkPage(pn){
+    if(!confirm('Submit answers for checking?'))return;
+    let cc=0;const res={};const key=answerKeys[pn];const r={1:[1,10],2:[11,20],3:[21,30],4:[31,40]};const[s,e]=r[pn];
+    for(let i=s;i<=e;i++){
+        const u=getAnswerValue(i);const c=key[i];
+        let ic=false;
+        if(pn===3&&(i===25||i===26)){const arr=sel2526.slice().sort().join(',');ic=(arr===c.split(',').sort().join(','));}
+        else if(pn===3&&(i===27||i===28)){const arr=sel2728.slice().sort().join(',');ic=(arr===c.split(',').sort().join(','));}
+        else if(pn===3&&(i===29||i===30)){const arr=sel2930.slice().sort().join(',');ic=(arr===c.split(',').sort().join(','));}
+        else if(c===''){ic=true;}  // skip empty keys (paired questions)
+        else{ic=(u===c.toLowerCase());}
+        if(ic)cc++;
+        res[i]={userAnswer:u||'(no answer)',correctAnswer:c,isCorrect:ic};
+        // Highlight
+        if(pn===1){const inp=p1Inputs[i];if(inp){inp.classList.remove('correct-highlight','incorrect-highlight');if(u)inp.classList.add(ic?'correct-highlight':'incorrect-highlight');}}
+        else if(pn===2){if(i<=17){const inp=p2Inputs[i];if(inp){inp.classList.remove('correct-highlight','incorrect-highlight');if(u)inp.classList.add(ic?'correct-highlight':'incorrect-highlight');}}else{const inp=p2MapInputs[i];if(inp){inp.classList.remove('correct-highlight','incorrect-highlight');if(u)inp.classList.add(ic?'correct-highlight':'incorrect-highlight');}}}
+        else if(pn===3){
+            if(i<=24){const b=document.getElementById('q'+i+'Block');b?.querySelectorAll('.mcq-option').forEach(o=>o.classList.remove('correct-highlight','incorrect-highlight'));if(u){const opt=b?.querySelector('.mcq-option[data-value="'+u+'"]');if(opt)opt.classList.add(ic?'correct-highlight':'incorrect-highlight');}}
+            else{const cid=i<=26?'twoLetters2526':i<=28?'twoLetters2728':'twoLetters2930';const sel=i<=26?sel2526:i<=28?sel2728:sel2930;const cv=key[i].split(',');document.querySelectorAll('#'+cid+' .mcq-checkbox').forEach(cb=>{cb.classList.remove('correct-highlight','incorrect-highlight');const v=cb.getAttribute('data-value');if(sel.includes(v)){cb.classList.add(cv.includes(v)?'correct-highlight':'incorrect-highlight');}});}
+        }
+        else if(pn===4){const inp=p4Inputs[i];if(inp){inp.classList.remove('correct-highlight','incorrect-highlight');if(u)inp.classList.add(ic?'correct-highlight':'incorrect-highlight');}}
+    }
+    showModal(res,cc,pn);
+}
+function showModal(res,cc,pn){
+    const ex=document.querySelector('.modal-overlay');if(ex)ex.remove();
+    const modal=document.createElement('div');modal.className='modal-overlay';
+    const r={1:[1,10],2:[11,20],3:[21,30],4:[31,40]};const[s,e]=r[pn];
+    let d='<div class="modal-content"><h3>📊 Results: '+cc+' / 10 Correct</h3><div class="score-details">';
+    for(let i=s;i<=e;i++){const rr=res[i];if(rr.correctAnswer==='')continue;const icon=rr.isCorrect?'✅':'❌';const extra=rr.isCorrect?'':' (Correct: "'+rr.correctAnswer+'")';d+='<div class="score-row '+(rr.isCorrect?'correct':'incorrect')+'"><span><strong>Q'+i+'</strong> Your: "'+rr.userAnswer+'"</span><span>'+icon+extra+'</span></div>';}
+    d+='</div><button class="modal-close" id="closeModalBtn">Close</button></div>';
+    modal.innerHTML=d;document.body.appendChild(modal);
+    document.getElementById('closeModalBtn').addEventListener('click',()=>modal.remove());
+    modal.addEventListener('click',e=>{if(e.target===modal)modal.remove();});
+}
+
+// MCQ
+document.querySelectorAll('.mcq-option').forEach(opt=>opt.addEventListener('click',function(){
+    const q=this.getAttribute('data-q');const b=document.getElementById('q'+q+'Block');
+    b.querySelectorAll('.mcq-option').forEach(o=>o.classList.remove('selected','correct-highlight','incorrect-highlight'));
+    this.classList.add('selected');refreshStatusBar();
+}));
+
+// Two-letter checkboxes
+document.querySelectorAll('.mcq-checkbox').forEach(cb=>{
+    cb.addEventListener('click',function(){
+        const grp=this.getAttribute('data-group');const sel=twoLetterMap[grp];const v=this.getAttribute('data-value');
+        if(this.classList.contains('selected')){this.classList.remove('selected');const idx=sel.indexOf(v);if(idx>-1)sel.splice(idx,1);}
+        else{if(sel.length>=2){alert('You can only select TWO answers.');return;}this.classList.add('selected');sel.push(v);}
+        refreshStatusBar();
+    });
+});
+
+// Input listeners
+document.querySelectorAll('.clear-btn').forEach(b=>b.addEventListener('click',function(){clearPage(parseInt(this.getAttribute('data-page')));}));
+document.querySelectorAll('.check-btn').forEach(b=>b.addEventListener('click',function(){checkPage(parseInt(this.getAttribute('data-page')));}));
+for(let i=1;i<=10;i++){if(p1Inputs[i]){p1Inputs[i].addEventListener('input',function(){this.classList.remove('correct-highlight','incorrect-highlight');refreshStatusBar();});p1Inputs[i].addEventListener('keypress',function(e){if(e.key==='Enter'){e.preventDefault();const n=p1Inputs[i+1];if(n)n.focus();else checkPage(1);}});}}
+for(let i=11;i<=17;i++){if(p2Inputs[i]){p2Inputs[i].addEventListener('input',function(){this.classList.remove('correct-highlight','incorrect-highlight');refreshStatusBar();});}}
+for(let i=18;i<=20;i++){p2MapInputs[i]=document.getElementById('p2_ans'+i);if(p2MapInputs[i]){p2MapInputs[i].addEventListener('input',function(){this.value=this.value.replace(/[^a-hA-H]/g,'').toUpperCase().slice(0,1);this.classList.remove('correct-highlight','incorrect-highlight');refreshStatusBar();});}}for(let i=31;i<=40;i++){if(p4Inputs[i]){p4Inputs[i].addEventListener('input',function(){this.classList.remove('correct-highlight','incorrect-highlight');refreshStatusBar();});p4Inputs[i].addEventListener('keypress',function(e){if(e.key==='Enter'){e.preventDefault();const n=p4Inputs[i+1];if(n)n.focus();else checkPage(4);}});}}
+
+// Audio
+const voiceAudio=new Audio('V9T1_Full.mp3');voiceAudio.volume=0.7;
+const wfBtn=document.getElementById('waveformPlayBtn'),wfIcon=document.getElementById('waveformIcon');
+const bgCv=document.getElementById('bgCanvasCompact'),prCv=document.getElementById('progressCanvasCompact');
+const wfCont=document.getElementById('waveformContainerCompact'),volSld=document.getElementById('volumeSlider'),volMute=document.getElementById('volumeMuteBtn');
+let isMuted=false,prevVol=0.7;
+function updateVolUI(){if(isMuted){volSld.value=0;voiceAudio.volume=0;}else{volSld.value=prevVol*100;voiceAudio.volume=prevVol;}volMute.querySelector('svg').innerHTML=(isMuted||voiceAudio.volume===0)?'<path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>':'<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>';}
+volSld.addEventListener('input',e=>{const v=parseFloat(e.target.value)/100;if(v===0){isMuted=true;prevVol=voiceAudio.volume;voiceAudio.volume=0;}else{if(isMuted)isMuted=false;prevVol=v;voiceAudio.volume=v;}updateVolUI();});
+volMute.addEventListener('click',()=>{if(isMuted){isMuted=false;voiceAudio.volume=prevVol;}else{isMuted=true;prevVol=voiceAudio.volume;voiceAudio.volume=0;}updateVolUI();});
+const bc=60,bh=Array.from({length:bc},()=>Math.random()*22+6);
+function initWF(){[bgCv,prCv].forEach(c=>{const p=c.parentElement;if(p){c.width=p.clientWidth;c.height=p.clientHeight;}});drawWF(bgCv,'#d1d1d6');}
+function drawWF(cv,clr){if(!cv)return;const ctx=cv.getContext('2d'),w=cv.width,h=cv.height;if(w===0||h===0)return;const bw=3.5,gap=2.5,tt=bw+gap;ctx.clearRect(0,0,w,h);ctx.fillStyle=clr;for(let i=0;i<bc;i++){const x=i*tt;if(x+bw>w)break;const bhv=bh[i],y=(h-bhv)/2;ctx.beginPath();ctx.roundRect(x,y,bw,bhv,2);ctx.fill();}}
+function drawWFP(prog){if(!prCv)return;const ctx=prCv.getContext('2d'),w=prCv.width,h=prCv.height;if(w===0||h===0)return;const bw=3.5,gap=2.5,tt=bw+gap;ctx.clearRect(0,0,w,h);ctx.fillStyle='#ffcc00';const lim=Math.floor(bc*prog);for(let i=0;i<lim;i++){const x=i*tt;if(x+bw>w)break;const bhv=bh[i],y=(h-bhv)/2;ctx.beginPath();ctx.roundRect(x,y,bw,bhv,2);ctx.fill();}}
+voiceAudio.addEventListener('timeupdate',()=>{if(voiceAudio.duration)drawWFP(voiceAudio.currentTime/voiceAudio.duration);});
+wfBtn.addEventListener('click',()=>{if(voiceAudio.paused){voiceAudio.play().catch(e=>console.log(e));wfIcon.innerHTML='<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';}else{voiceAudio.pause();wfIcon.innerHTML='<path d="M8 5v14l11-7z"/>';}});
+wfCont.addEventListener('click',e=>{const rect=bgCv.getBoundingClientRect();const pct=Math.min(1,Math.max(0,(e.clientX-rect.left)/rect.width));if(voiceAudio.duration)voiceAudio.currentTime=pct*voiceAudio.duration;});
+window.addEventListener('resize',()=>{initWF();if(!voiceAudio.paused)drawWFP(voiceAudio.currentTime/voiceAudio.duration);});
+if(!window.CanvasRenderingContext2D.prototype.roundRect){CanvasRenderingContext2D.prototype.roundRect=function(x,y,w,h,r){if(w<2*r)r=w/2;if(h<2*r)r=h/2;this.moveTo(x+r,y);this.lineTo(x+w-r,y);this.quadraticCurveTo(x+w,y,x+w,y+r);this.lineTo(x+w,y+h-r);this.quadraticCurveTo(x+w,y+h,x+w-r,y+h);this.lineTo(x+r,y+h);this.quadraticCurveTo(x,y+h,x,y+h-r);this.lineTo(x,y+r);this.quadraticCurveTo(x,y,x+r,y);return this;};}
+// Skip & time
+document.getElementById('skipBackBtn').addEventListener('click',function(){voiceAudio.currentTime=Math.max(0,voiceAudio.currentTime-10);});
+document.getElementById('skipFwdBtn').addEventListener('click',function(){voiceAudio.currentTime=Math.min(voiceAudio.duration||0,voiceAudio.currentTime+10);});
+function fmtT(s){if(!s||isNaN(s))return'0:00';return Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0');}
+voiceAudio.addEventListener('timeupdate',function(){var d=document.getElementById('audioTimeDisplay');if(d)d.textContent=fmtT(voiceAudio.currentTime)+' / '+fmtT(voiceAudio.duration);});
+voiceAudio.addEventListener('loadedmetadata',function(){var d=document.getElementById('audioTimeDisplay');if(d)d.textContent='0:00 / '+fmtT(voiceAudio.duration);});
+// Fullscreen
+const fsBtn=document.getElementById('fullscreenBtn'),fsTxt=document.getElementById('fsText');
+function updateFSText(){if(document.fullscreenElement||document.webkitFullscreenElement||document.mozFullScreenElement){fsTxt.textContent='Exit';fsBtn.querySelector('span:first-child').textContent='✖';}else{fsTxt.textContent='Full Screen';fsBtn.querySelector('span:first-child').textContent='⛶';}adjustSBFS();}
+function adjustSBFS(){const sb=document.getElementById('answerStatusBar');if(!sb)return;const isFull=!!(document.fullscreenElement||document.webkitFullscreenElement||document.mozFullScreenElement);sb.classList.toggle('fullscreen-mode',isFull);sb.style.zIndex=isFull?'1000':'100';}
+fsBtn.addEventListener('click',()=>{const el=document.documentElement;if(!document.fullscreenElement&&!document.webkitFullscreenElement&&!document.mozFullScreenElement){if(el.requestFullscreen)el.requestFullscreen().then(updateFSText);else if(el.webkitRequestFullscreen)el.webkitRequestFullscreen();else if(el.mozRequestFullScreen)el.mozRequestFullScreen();}else{if(document.exitFullscreen)document.exitFullscreen().then(updateFSText);else if(document.webkitExitFullscreen)document.webkitExitFullscreen();else if(document.mozCancelFullScreen)document.mozCancelFullScreen();}});
+document.addEventListener('fullscreenchange',updateFSText);document.addEventListener('webkitfullscreenchange',updateFSText);document.addEventListener('mozfullscreenchange',updateFSText);
+// Draggable status bar
+(function(){const bar=document.getElementById('answerStatusBar');const header=bar.querySelector('.status-header');let isDragging=false,startY=0,startTop=0;
+header.addEventListener('mousedown',e=>{isDragging=true;bar.classList.add('dragging-bar');bar.style.transform='none';startY=e.clientY;startTop=bar.getBoundingClientRect().top;bar.style.top=startTop+'px';e.preventDefault();});
+document.addEventListener('mousemove',e=>{if(!isDragging)return;const newTop=Math.max(10,Math.min(window.innerHeight-bar.offsetHeight-10,startTop+(e.clientY-startY)));bar.style.top=newTop+'px';});
+document.addEventListener('mouseup',()=>{isDragging=false;bar.classList.remove('dragging-bar');});
+header.addEventListener('touchstart',e=>{isDragging=true;bar.style.transform='none';startY=e.touches[0].clientY;startTop=bar.getBoundingClientRect().top;bar.style.top=startTop+'px';},{passive:true});
+document.addEventListener('touchmove',e=>{if(!isDragging)return;const newTop=Math.max(10,Math.min(window.innerHeight-bar.offsetHeight-10,startTop+(e.touches[0].clientY-startY)));bar.style.top=newTop+'px';},{passive:true});
+document.addEventListener('touchend',()=>{isDragging=false;});})();
+// Init map inputs
+p2MapInputs[18]=document.getElementById('p2_ans18');
+p2MapInputs[19]=document.getElementById('p2_ans19');
+p2MapInputs[20]=document.getElementById('p2_ans20');
+// Init
+initWF();updateVolUI();updateAnswerStatusBar();
+</script>
+</body>
+</html>
