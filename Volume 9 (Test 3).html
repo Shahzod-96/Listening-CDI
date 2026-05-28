@@ -107,9 +107,8 @@
         .mcq-radio-inner{width:10px;height:10px;border-radius:50%;background:transparent}
         .mcq-label{font-weight:500;font-size:16px;color:#1c2e40}
         .mcq-letter{font-weight:700;color:#1e3a5f;margin-right:6px}
-        /* Two-col MCQ grid */
-        .mcq-two-col{display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
-        @media(max-width:650px){.mcq-two-col{grid-template-columns:1fr}}
+        /* MCQ single column */
+        .mcq-two-col{display:flex;flex-direction:column;}
         /* Matching box */
         .matching-layout{display:grid;grid-template-columns:1fr 220px;gap:24px;align-items:start;margin:16px 0}
         .matching-list{display:flex;flex-direction:column;gap:14px}
@@ -122,6 +121,27 @@
         .option-item:last-child{border-bottom:none}
         .option-letter{font-weight:800;color:#1e3a5f;min-width:18px}
         @media(max-width:700px){.matching-layout{grid-template-columns:1fr}.options-box{position:static}}
+        /* Drag & Drop */
+        .matching-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:8px}
+        .matching-items-list{background:#f8fafd;border-radius:20px;padding:16px;border:1px solid #e2edf2}
+        .matching-items-list h4{font-size:15px;font-weight:700;color:#1e3a5f;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #ffcc00;display:inline-block}
+        .matching-drag-item{background:#fff;border:1.5px solid #d4dee8;border-radius:14px;padding:9px 12px;margin-bottom:8px;cursor:grab;display:flex;align-items:center;gap:10px;font-weight:500;transition:all 0.2s}
+        .matching-drag-item:hover{border-color:#ffcc00;background:#fffef7}
+        .matching-drag-item.dragging{opacity:0.4}
+        .drag-letter-badge{display:inline-flex;align-items:center;justify-content:center;background:#1e3a5f;color:#fff;border-radius:50%;width:26px;height:26px;font-weight:700;font-size:12px;flex-shrink:0}
+        .drag-description{font-weight:500;font-size:13px;color:#1c2e40}
+        .matching-drop-zone{background:#f8fafd;border-radius:20px;padding:20px;border:1px solid #e2edf2}
+        .matching-drop-zone h4{font-size:15px;font-weight:700;color:#1e3a5f;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid #ffcc00;display:inline-block}
+        .matching-drop-slot{background:#fff;border:2px dashed #cbd5e1;border-radius:14px;padding:12px 16px;margin-bottom:10px;min-height:56px;display:flex;align-items:center;gap:12px;transition:all 0.2s}
+        .matching-drop-slot.filled{border:2px solid #4caf50;background:#e8f5e9}
+        .matching-drop-slot.drag-over-drop{border-color:#ffcc00;background:#fff8e1}
+        .matching-drop-slot.correct-highlight{background:#c8e6c9!important;border-color:#2e7d32!important}
+        .matching-drop-slot.incorrect-highlight{background:#ffcdd2!important;border-color:#c62828!important}
+        .slot-label{font-weight:700;color:#1e3a5f;font-size:14px;flex:1}
+        .slot-value{color:#2e7d32;font-weight:500;font-size:13px}
+        .remove-btn{background:#ffebee;border:none;border-radius:20px;padding:3px 10px;font-size:11px;cursor:pointer;color:#c62828;flex-shrink:0}
+        .remove-btn:hover{background:#ffcdd2}
+        @media(max-width:700px){.matching-grid{grid-template-columns:1fr}}
         .action-buttons{margin-top:40px;display:flex;justify-content:space-between;align-items:center;gap:18px;border-top:1px solid #e2edf2;padding-top:28px;flex-wrap:wrap}
         .action-buttons .left-group{display:flex;align-items:center;gap:12px}
         .action-buttons .right-group{display:flex;gap:18px}
@@ -295,30 +315,30 @@
                             <table style="width:100%;border-collapse:collapse;font-size:15px;min-width:560px;">
                                 <thead>
                                     <tr style="background:#1e3a5f;color:#fff;">
-                                        <th style="padding:12px 14px;border-radius:12px 0 0 0;text-align:left;">Vacation Job</th>
-                                        <th style="padding:12px 14px;text-align:left;">Main Advantage</th>
-                                        <th style="padding:12px 14px;text-align:left;">Main Disadvantage</th>
-                                        <th style="padding:12px 14px;border-radius:0 12px 0 0;text-align:left;">Recommendation</th>
+                                        <th style="padding:14px 16px;border-radius:12px 0 0 0;text-align:left;vertical-align:middle;">Vacation Job</th>
+                                        <th style="padding:14px 16px;text-align:left;vertical-align:middle;">Main Advantage</th>
+                                        <th style="padding:14px 16px;text-align:left;vertical-align:middle;">Main Disadvantage</th>
+                                        <th style="padding:14px 16px;border-radius:0 12px 0 0;text-align:left;vertical-align:middle;">Recommendation</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr style="background:#f8fafd;border-bottom:1px solid #e2edf2;">
-                                        <td style="padding:12px 14px;font-weight:700;color:#1e3a5f;">Stocktaking</td>
-                                        <td style="padding:12px 14px;"><span class="number-badge">11</span><input type="text" class="answer-input p2-input" id="p2_ans11" placeholder="Answer" maxlength="40" autocomplete="off" style="width:130px;"></td>
-                                        <td style="padding:12px 14px;color:#555;">tiring</td>
-                                        <td style="padding:12px 14px;"><span class="number-badge">12</span><input type="text" class="answer-input p2-input" id="p2_ans12" placeholder="Answer" maxlength="40" autocomplete="off" style="width:130px;"></td>
+                                        <td style="padding:14px 16px;font-weight:700;color:#1e3a5f;vertical-align:middle;">Stocktaking</td>
+                                        <td style="padding:14px 16px;vertical-align:middle;"><span class="number-badge">11</span><input type="text" class="answer-input p2-input" id="p2_ans11" placeholder="Answer" maxlength="40" autocomplete="off" style="width:130px;"></td>
+                                        <td style="padding:14px 16px;color:#555;vertical-align:middle;">tiring</td>
+                                        <td style="padding:14px 16px;vertical-align:middle;"><span class="number-badge">12</span><input type="text" class="answer-input p2-input" id="p2_ans12" placeholder="Answer" maxlength="40" autocomplete="off" style="width:130px;"></td>
                                     </tr>
                                     <tr style="background:#fff;border-bottom:1px solid #e2edf2;">
-                                        <td style="padding:12px 14px;font-weight:700;color:#1e3a5f;">Office work</td>
-                                        <td style="padding:12px 14px;color:#555;">air-conditioning</td>
-                                        <td style="padding:12px 14px;"><span class="number-badge">13</span><input type="text" class="answer-input p2-input" id="p2_ans13" placeholder="Answer" maxlength="40" autocomplete="off" style="width:130px;"></td>
-                                        <td style="padding:12px 14px;">choose a <span class="number-badge">14</span><input type="text" class="answer-input p2-input" id="p2_ans14" placeholder="Answer" maxlength="40" autocomplete="off" style="width:110px;"></td>
+                                        <td style="padding:14px 16px;font-weight:700;color:#1e3a5f;vertical-align:middle;">Office work</td>
+                                        <td style="padding:14px 16px;color:#555;vertical-align:middle;">air-conditioning</td>
+                                        <td style="padding:14px 16px;vertical-align:middle;"><span class="number-badge">13</span><input type="text" class="answer-input p2-input" id="p2_ans13" placeholder="Answer" maxlength="40" autocomplete="off" style="width:130px;"></td>
+                                        <td style="padding:14px 16px;vertical-align:middle;">choose a <span class="number-badge">14</span><input type="text" class="answer-input p2-input" id="p2_ans14" placeholder="Answer" maxlength="40" autocomplete="off" style="width:110px;"></td>
                                     </tr>
                                     <tr style="background:#f8fafd;">
-                                        <td style="padding:12px 14px;font-weight:700;color:#1e3a5f;">Theme park attendant</td>
-                                        <td style="padding:12px 14px;"><span class="number-badge">15</span><input type="text" class="answer-input p2-input" id="p2_ans15" placeholder="Answer" maxlength="40" autocomplete="off" style="width:130px;"></td>
-                                        <td style="padding:12px 14px;color:#555;">rude customers</td>
-                                        <td style="padding:12px 14px;"><span class="number-badge">16</span><input type="text" class="answer-input p2-input" id="p2_ans16" placeholder="Answer" maxlength="40" autocomplete="off" style="width:130px;"></td>
+                                        <td style="padding:14px 16px;font-weight:700;color:#1e3a5f;vertical-align:middle;">Theme park attendant</td>
+                                        <td style="padding:14px 16px;vertical-align:middle;"><span class="number-badge">15</span><input type="text" class="answer-input p2-input" id="p2_ans15" placeholder="Answer" maxlength="40" autocomplete="off" style="width:130px;"></td>
+                                        <td style="padding:14px 16px;color:#555;vertical-align:middle;">rude customers</td>
+                                        <td style="padding:14px 16px;vertical-align:middle;"><span class="number-badge">16</span><input type="text" class="answer-input p2-input" id="p2_ans16" placeholder="Answer" maxlength="40" autocomplete="off" style="width:130px;"></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -415,45 +435,30 @@
                         </div>
                     </div>
                 </div>
-                <!-- Q27-30 Matching -->
+                <!-- Q27-30 Drag & Drop Matching -->
                 <div class="section-card">
                     <div class="section-title">Questions 27–30 — What disadvantage do the speakers identify for each textbook?</div>
                     <div class="section-content">
-                        <p style="font-size:15px;font-weight:500;color:#4a627a;margin-bottom:16px;">Choose the correct answer, <strong>A–H</strong>, from the box and write the correct letter.</p>
-                        <div class="matching-layout">
-                            <!-- LEFT: questions -->
-                            <div class="matching-list">
-                                <div class="matching-row">
-                                    <span class="matching-qnum">27</span>
-                                    <span class="matching-book">Vocal Instruction</span>
-                                    <input type="text" class="map-label-input p3-match" id="p3_ans27" maxlength="1" placeholder="A-H" autocomplete="off">
-                                </div>
-                                <div class="matching-row">
-                                    <span class="matching-qnum">28</span>
-                                    <span class="matching-book">Improve Your Accent</span>
-                                    <input type="text" class="map-label-input p3-match" id="p3_ans28" maxlength="1" placeholder="A-H" autocomplete="off">
-                                </div>
-                                <div class="matching-row">
-                                    <span class="matching-qnum">29</span>
-                                    <span class="matching-book">Actors' Handbook</span>
-                                    <input type="text" class="map-label-input p3-match" id="p3_ans29" maxlength="1" placeholder="A-H" autocomplete="off">
-                                </div>
-                                <div class="matching-row">
-                                    <span class="matching-qnum">30</span>
-                                    <span class="matching-book">Confident Voice Delivery</span>
-                                    <input type="text" class="map-label-input p3-match" id="p3_ans30" maxlength="1" placeholder="A-H" autocomplete="off">
-                                </div>
+                        <p style="font-size:15px;font-weight:500;color:#4a627a;margin-bottom:16px;">Drag each disadvantage from the right panel and drop it onto the correct textbook on the left.</p>
+                        <div class="matching-grid" id="matchingGridP3">
+                            <!-- LEFT: drop zones -->
+                            <div class="matching-drop-zone" id="dropZonesP3">
+                                <h4>📚 Textbooks</h4>
+                                <div id="p3dropZone27" class="matching-drop-slot" data-q="27"><span class="slot-label">27. Vocal Instruction</span><span class="slot-value" id="p3slotValue27"></span><button class="remove-btn" style="display:none;">✖</button></div>
+                                <div id="p3dropZone28" class="matching-drop-slot" data-q="28"><span class="slot-label">28. Improve Your Accent</span><span class="slot-value" id="p3slotValue28"></span><button class="remove-btn" style="display:none;">✖</button></div>
+                                <div id="p3dropZone29" class="matching-drop-slot" data-q="29"><span class="slot-label">29. Actors' Handbook</span><span class="slot-value" id="p3slotValue29"></span><button class="remove-btn" style="display:none;">✖</button></div>
+                                <div id="p3dropZone30" class="matching-drop-slot" data-q="30"><span class="slot-label">30. Confident Voice Delivery</span><span class="slot-value" id="p3slotValue30"></span><button class="remove-btn" style="display:none;">✖</button></div>
                             </div>
-                            <!-- RIGHT: options box -->
-                            <div class="options-box">
-                                <span class="options-title">📋 Disadvantages</span>
-                                <div class="option-item"><span class="option-letter">A</span><span>too expensive</span></div>
-                                <div class="option-item"><span class="option-letter">B</span><span>too limited</span></div>
-                                <div class="option-item"><span class="option-letter">C</span><span>prejudiced</span></div>
-                                <div class="option-item"><span class="option-letter">D</span><span>unavailable</span></div>
-                                <div class="option-item"><span class="option-letter">E</span><span>unrealistic</span></div>
-                                <div class="option-item"><span class="option-letter">F</span><span>out of date</span></div>
-                                <div class="option-item"><span class="option-letter">G</span><span>too detailed</span></div>
+                            <!-- RIGHT: draggable items -->
+                            <div class="matching-items-list" id="draggableItemsP3">
+                                <h4>🎯 Disadvantages</h4>
+                                <div class="matching-drag-item" draggable="true" data-value="A" data-description="too expensive"><span class="drag-letter-badge">A</span><span class="drag-description">too expensive</span></div>
+                                <div class="matching-drag-item" draggable="true" data-value="B" data-description="too limited"><span class="drag-letter-badge">B</span><span class="drag-description">too limited</span></div>
+                                <div class="matching-drag-item" draggable="true" data-value="C" data-description="prejudiced"><span class="drag-letter-badge">C</span><span class="drag-description">prejudiced</span></div>
+                                <div class="matching-drag-item" draggable="true" data-value="D" data-description="unavailable"><span class="drag-letter-badge">D</span><span class="drag-description">unavailable</span></div>
+                                <div class="matching-drag-item" draggable="true" data-value="E" data-description="unrealistic"><span class="drag-letter-badge">E</span><span class="drag-description">unrealistic</span></div>
+                                <div class="matching-drag-item" draggable="true" data-value="F" data-description="out of date"><span class="drag-letter-badge">F</span><span class="drag-description">out of date</span></div>
+                                <div class="matching-drag-item" draggable="true" data-value="G" data-description="too detailed"><span class="drag-letter-badge">G</span><span class="drag-description">too detailed</span></div>
                             </div>
                         </div>
                     </div>
@@ -537,8 +542,21 @@ for(let i=11;i<=16;i++) p2TextInputs[i]=document.getElementById('p2_ans'+i);
 const p2MCQ=[17,18,19,20];
 
 const p3MCQ=[21,22,23,24,25,26];
-const p3MatchInputs={};
-for(let i=27;i<=30;i++) p3MatchInputs[i]=document.getElementById('p3_ans'+i);
+let matchingP3={27:"",28:"",29:"",30:""};
+
+function setMatchingSlotP3(qnum,value){
+    matchingP3[qnum]=value||"";
+    const slot=document.getElementById('p3dropZone'+qnum);
+    const vs=document.getElementById('p3slotValue'+qnum);
+    const rb=slot.querySelector('.remove-btn');
+    if(value){
+        const item=document.querySelector('#draggableItemsP3 .matching-drag-item[data-value="'+value+'"]');
+        vs.innerText=item?'— '+item.getAttribute('data-description'):value;
+        slot.classList.add('filled');rb.style.display="inline-block";
+        rb.onclick=(e)=>{e.stopPropagation();setMatchingSlotP3(qnum,"");refreshStatusBar();};
+    }else{vs.innerText="";slot.classList.remove('filled');rb.style.display="none";}
+    refreshStatusBar();
+}
 
 const p4Inputs={};
 for(let i=31;i<=40;i++) p4Inputs[i]=document.getElementById('p4_ans'+i);
@@ -569,7 +587,7 @@ function getAnswerValue(q){
     }
     if(currentPage===3){
         if(q<=26){const b=document.getElementById('q'+q+'Block');const s=b?.querySelector('.mcq-option.selected');return s?s.getAttribute('data-value'):'';}
-        const i=p3MatchInputs[q];return i?i.value.trim().toUpperCase():'';
+        return matchingP3[q]||'';
     }
     if(currentPage===4){const i=p4Inputs[q];return i?i.value.trim().toLowerCase():'';}
     return '';
@@ -589,8 +607,10 @@ function jumpToQuestion(q){
     let tp=q<=10?1:q<=20?2:q<=30?3:4;
     if(currentPage!==tp)switchPage(tp);
     setTimeout(()=>{
-        const el=document.getElementById('q'+q+'Block')||p1TextInputs[q]||p2TextInputs[q]||p3MatchInputs[q]||p4Inputs[q];
-        if(el){if(typeof el.focus==='function')el.focus();el.scrollIntoView({behavior:'smooth',block:'center'});}
+        if(tp===1){const el=document.getElementById('q'+q+'Block')||p1TextInputs[q];if(el){if(typeof el.focus==='function')el.focus();el.scrollIntoView({behavior:'smooth',block:'center'});}}
+        else if(tp===2){const el=document.getElementById('q'+q+'Block')||p2TextInputs[q];if(el){if(typeof el.focus==='function')el.focus();el.scrollIntoView({behavior:'smooth',block:'center'});}}
+        else if(tp===3){if(q<=26)document.getElementById('q'+q+'Block')?.scrollIntoView({behavior:'smooth',block:'center'});else document.getElementById('p3dropZone'+q)?.scrollIntoView({behavior:'smooth',block:'center'});}
+        else{const i=p4Inputs[q];if(i){i.focus();i.scrollIntoView({behavior:'smooth',block:'center'});}}
     },100);
 }
 
@@ -601,7 +621,7 @@ function clearPage(pn){
     if(!confirm('Clear all answers on this page?'))return;
     if(pn===1){document.querySelectorAll('#page1 .mcq-option').forEach(o=>o.classList.remove('selected','correct-highlight','incorrect-highlight'));for(let i=9;i<=10;i++){if(p1TextInputs[i]){p1TextInputs[i].value='';p1TextInputs[i].classList.remove('has-value','correct-highlight','incorrect-highlight');}}}
     else if(pn===2){for(let i=11;i<=16;i++){if(p2TextInputs[i]){p2TextInputs[i].value='';p2TextInputs[i].classList.remove('has-value','correct-highlight','incorrect-highlight');}}document.querySelectorAll('#page2 .mcq-option').forEach(o=>o.classList.remove('selected','correct-highlight','incorrect-highlight'));}
-    else if(pn===3){document.querySelectorAll('#page3 .mcq-option').forEach(o=>o.classList.remove('selected','correct-highlight','incorrect-highlight'));for(let i=27;i<=30;i++){if(p3MatchInputs[i]){p3MatchInputs[i].value='';p3MatchInputs[i].classList.remove('has-value','correct-highlight','incorrect-highlight');}}}
+    else if(pn===3){document.querySelectorAll('#page3 .mcq-option').forEach(o=>o.classList.remove('selected','correct-highlight','incorrect-highlight'));for(let i=27;i<=30;i++){setMatchingSlotP3(i,"");const slot=document.getElementById('p3dropZone'+i);if(slot)slot.classList.remove('correct-highlight','incorrect-highlight');}}
     else if(pn===4){for(let i=31;i<=40;i++){if(p4Inputs[i]){p4Inputs[i].value='';p4Inputs[i].classList.remove('has-value','correct-highlight','incorrect-highlight');}}}
     refreshStatusBar();
 }
@@ -623,7 +643,7 @@ function checkPage(pn){
             else{const b=document.getElementById('q'+i+'Block');b?.querySelectorAll('.mcq-option').forEach(o=>o.classList.remove('correct-highlight','incorrect-highlight'));if(u){const opt=b?.querySelector('.mcq-option[data-value="'+u.toUpperCase()+'"]');if(opt)opt.classList.add(ic?'correct-highlight':'incorrect-highlight');}}
         } else if(pn===3){
             if(i<=26){const b=document.getElementById('q'+i+'Block');b?.querySelectorAll('.mcq-option').forEach(o=>o.classList.remove('correct-highlight','incorrect-highlight'));if(u){const opt=b?.querySelector('.mcq-option[data-value="'+u.toUpperCase()+'"]');if(opt)opt.classList.add(ic?'correct-highlight':'incorrect-highlight');}}
-            else{const inp=p3MatchInputs[i];if(inp){inp.classList.remove('correct-highlight','incorrect-highlight');if(u)inp.classList.add(ic?'correct-highlight':'incorrect-highlight');}}
+            else{const slot=document.getElementById('p3dropZone'+i);if(slot){slot.classList.remove('correct-highlight','incorrect-highlight');if(u)slot.classList.add(ic?'correct-highlight':'incorrect-highlight');}}
         } else if(pn===4){
             const inp=p4Inputs[i];if(inp){inp.classList.remove('correct-highlight','incorrect-highlight');if(u)inp.classList.add(ic?'correct-highlight':'incorrect-highlight');}
         }
@@ -650,10 +670,19 @@ document.querySelectorAll('.mcq-option').forEach(opt=>opt.addEventListener('clic
     this.classList.add('selected');refreshStatusBar();
 }));
 
-// Letter inputs
-document.querySelectorAll('.p3-match').forEach(inp=>{
-    inp.addEventListener('input',function(){this.value=this.value.replace(/[^a-hA-H]/g,'').toUpperCase().slice(0,1);this.classList.remove('correct-highlight','incorrect-highlight');this.classList.toggle('has-value',this.value!=='');refreshStatusBar();});
-});
+// Drag & Drop for P3 Q27-30
+(function initDragDropP3(){
+    const container=document.getElementById('draggableItemsP3');if(!container)return;
+    container.querySelectorAll('.matching-drag-item').forEach(drag=>{
+        drag.addEventListener('dragstart',e=>{e.dataTransfer.setData('text/plain',JSON.stringify({value:drag.getAttribute('data-value'),desc:drag.getAttribute('data-description')}));drag.classList.add('dragging');e.dataTransfer.effectAllowed='copy';});
+        drag.addEventListener('dragend',()=>drag.classList.remove('dragging'));
+    });
+    document.querySelectorAll('#dropZonesP3 .matching-drop-slot').forEach(zone=>{
+        zone.addEventListener('dragover',e=>{e.preventDefault();zone.classList.add('drag-over-drop');});
+        zone.addEventListener('dragleave',()=>zone.classList.remove('drag-over-drop'));
+        zone.addEventListener('drop',e=>{e.preventDefault();zone.classList.remove('drag-over-drop');const data=JSON.parse(e.dataTransfer.getData('text/plain'));setMatchingSlotP3(parseInt(zone.getAttribute('data-q')),data.value);});
+    });
+})();
 
 // Text inputs
 document.querySelectorAll('.clear-btn').forEach(b=>b.addEventListener('click',function(){clearPage(parseInt(this.getAttribute('data-page')));}));
@@ -662,7 +691,6 @@ document.querySelectorAll('.check-btn').forEach(b=>b.addEventListener('click',fu
     if(!inp)return;
     inp.addEventListener('input',function(){this.classList.remove('correct-highlight','incorrect-highlight');this.classList.toggle('has-value',this.value.trim()!=='');refreshStatusBar();});
 });
-
 // Audio
 const voiceAudio=new Audio('V9T3_Full.mp3');voiceAudio.volume=0.7;
 const wfBtn=document.getElementById('waveformPlayBtn'),wfIcon=document.getElementById('waveformIcon');
