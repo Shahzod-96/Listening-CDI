@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>IELTS Listening Test V9T4 | Elites Learning Center</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        .botanical-background{position:fixed;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse at 0% 0%,#e8f0fc 0%,transparent 50%),radial-gradient(ellipse at 100% 0%,#fef3d8 0%,transparent 45%),radial-gradient(ellipse at 100% 100%,#e4f2ff 0%,transparent 50%),radial-gradient(ellipse at 0% 100%,#fde8f5 0%,transparent 45%),#ffffff;z-index:0;pointer-events:none}
+        .vein-lines{position:absolute;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(circle,rgba(30,58,95,0.12) 1px,transparent 1px);background-size:28px 28px}
+        .leaf-whispers{position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(circle at 8% 12%,rgba(99,179,237,0.18) 0%,transparent 28%),radial-gradient(circle at 92% 10%,rgba(245,182,66,0.16) 0%,transparent 26%),radial-gradient(circle at 88% 90%,rgba(129,199,245,0.15) 0%,transparent 30%),radial-gradient(circle at 10% 88%,rgba(252,196,228,0.18) 0%,transparent 28%),radial-gradient(circle at 50% 50%,rgba(255,255,255,0.9) 0%,transparent 55%);filter:blur(2px)}
+        .floating-spores{position:absolute;top:0;right:0;width:340px;height:340px;background:repeating-linear-gradient(-45deg,transparent,transparent 8px,rgba(245,182,66,0.07) 8px,rgba(245,182,66,0.07) 10px);border-radius:0 0 0 100%}
+        .marble-flow{position:absolute;bottom:0;left:0;width:280px;height:280px;background:repeating-linear-gradient(-45deg,transparent,transparent 8px,rgba(30,58,95,0.06) 8px,rgba(30,58,95,0.06) 10px);border-radius:0 100% 0 0}
+        .ripple-rings{position:absolute;top:-180px;left:50%;transform:translateX(-50%);width:900px;height:400px;border-radius:50%;border:1.5px solid rgba(30,58,95,0.07);box-shadow:0 0 0 40px rgba(30,58,95,0.03),0 0 0 80px rgba(30,58,95,0.02),0 0 0 120px rgba(30,58,95,0.015)}
+        .soft-vignette{position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse at center,transparent 60%,rgba(180,200,230,0.2) 100%)}
+        body{font-family:'Segoe UI','Roboto','Helvetica Neue',sans-serif;padding:40px 20px;display:flex;justify-content:center;min-height:100vh;position:relative;background:transparent}
+        .main-container{width:100%;max-width:1000px;position:relative;z-index:10}
+        .sticky-top-bar{position:sticky;top:0;z-index:50;padding-top:10px;padding-bottom:10px}
+        .top-bar{display:flex;justify-content:space-between;align-items:center;padding:12px 24px;background:rgba(255,255,255,0.96);border-radius:60px;box-shadow:0 4px 12px rgba(0,0,0,0.06);backdrop-filter:blur(2px);border:1px solid rgba(30,58,95,0.08);gap:16px;flex-wrap:wrap}
+        .logo-area{display:flex;align-items:center;gap:12px}
+        .logo-img{height:44px;width:auto;border-radius:8px;object-fit:contain}
+        .logo-text{font-weight:700;font-size:18px;color:#000;letter-spacing:0.5px}
+        .waveform-player-compact{background:#eef2f7;border-radius:40px;padding:4px 12px 4px 16px;display:flex;align-items:center;gap:12px;min-width:200px;flex:1;max-width:400px}
+        .waveform-play-btn{background:#ffcc00;border:none;width:34px;height:34px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform 0.2s;flex-shrink:0}
+        .waveform-play-btn svg{fill:#000;width:18px;height:18px}
+        .waveform-wrapper-compact{position:relative;flex-grow:1;height:34px;cursor:pointer;min-width:100px}
+        .waveform-wrapper-compact canvas{position:absolute;top:0;left:0;width:100%;height:100%;border-radius:20px}
+        .right-controls{display:flex;align-items:center;gap:12px;flex-shrink:0}
+        .volume-controller{background:#eef2f7;border-radius:32px;display:flex;align-items:center;gap:8px;padding:4px 12px 4px 10px}
+        .volume-icon-btn{background:transparent;border:none;width:28px;height:28px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#000}
+        .volume-icon-btn svg{width:18px;height:18px;fill:currentColor}
+        .volume-slider{width:80px;height:4px;-webkit-appearance:none;background:#cbd5e1;border-radius:5px;outline:none;cursor:pointer}
+        .volume-slider::-webkit-slider-thumb{-webkit-appearance:none;width:12px;height:12px;border-radius:50%;background:#000;cursor:pointer}
+        .fullscreen-btn{background:#eef2f7;border:none;padding:10px 20px;border-radius:40px;font-size:14px;font-weight:600;cursor:pointer;color:#000;display:flex;align-items:center;gap:8px;white-space:nowrap}
+        .fullscreen-btn:hover{background:#ffcc00}
+        .skip-btn{background:none;border:none;cursor:pointer;color:#1e3a5f;padding:4px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:background 0.2s;flex-shrink:0}
+        .skip-btn:hover{background:rgba(30,58,95,0.12)}
+        .audio-time-display{font-size:11px;color:#555;white-space:nowrap;flex-shrink:0;font-variant-numeric:tabular-nums;min-width:80px}
+
+        .page-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;width:100%}
+        .page-tab{padding:12px 0;border-radius:40px;font-weight:700;font-size:14px;cursor:pointer;transition:all 0.25s;border:2px solid transparent;background:rgba(255,255,255,0.65);color:#5a6e82;box-shadow:0 2px 8px rgba(0,0,0,0.04);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;flex:1;text-align:center}
+        .page-tab:hover{background:#ffcc00;color:#1e3a5f;border-color:#ffcc00;transform:translateY(-2px)}
+        .page-tab.active{background:#1e3a5f;color:#fff;border-color:#1e3a5f}
+        .nav-buttons{position:fixed;bottom:24px;right:24px;display:flex;gap:10px;z-index:200}
+        .nav-btn{width:48px;height:48px;border-radius:50%;border:1px solid rgba(30,58,95,0.1);background:rgba(255,255,255,0.96);box-shadow:0 4px 16px rgba(0,0,0,0.12);cursor:pointer;display:flex;align-items:center;justify-content:center}
+        .nav-btn:hover{background:#ffcc00}
+        .nav-btn svg{width:22px;height:22px;fill:#1e3a5f}
+        .answer-status-bar{position:fixed;top:50%;left:0;transform:translateY(-50%);background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);border-radius:0 20px 20px 0;padding:12px 8px;box-shadow:4px 0 20px rgba(0,0,0,0.08);border:1px solid rgba(30,58,95,0.12);border-left:none;z-index:100;display:flex;flex-direction:column;align-items:center;gap:18px;user-select:none}
+        .answer-status-bar.fullscreen-mode .status-number{width:36px;height:36px;font-size:16px}
+        .answer-status-bar.dragging-bar{box-shadow:6px 0 28px rgba(0,0,0,0.18);border-color:#ffcc00}
+        .status-header{display:flex;flex-direction:column;align-items:center;gap:4px;margin-bottom:4px;padding-bottom:6px;border-bottom:1.5px solid #e2edf2;width:100%;cursor:grab}
+        .status-header:active{cursor:grabbing}
+        .status-header span:first-child{font-size:20px}
+        .status-title{font-weight:700;font-size:11px;color:#1e3a5f}
+        .completed-badge{background:#e8f5e9;color:#2e7d32;border-radius:30px;padding:2px 8px;font-size:11px;font-weight:700}
+        .status-grid{display:flex;flex-direction:column;gap:8px;align-items:center}
+        .status-item{display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer;width:42px}
+        .status-item:hover{transform:scale(1.05)}
+        .status-number{font-size:13px;font-weight:700;width:34px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:50%}
+        .status-number.filled{background:#4caf50;color:#fff}
+        .status-number.empty{background:#ffebee;color:#c62828;border:1.5px solid #ffcdd2}
+        .status-label{font-size:8px;font-weight:600;color:#5a6e82}
+        .status-footer{margin-top:6px;font-size:8px;text-align:center;color:#8ba0b5;border-top:1px solid #eef2f7;padding-top:6px}
+        .worksheet{width:100%;background:rgba(255,255,255,0.97);border-radius:24px;box-shadow:0 20px 40px rgba(0,0,0,0.07);overflow:hidden;padding:32px 40px 48px;border:1px solid rgba(30,58,95,0.07)}
+        .header{border-bottom:3px solid #1e3a5f;margin-bottom:28px;padding-bottom:18px}
+        .title{font-size:28px;font-weight:700;color:#0b2b3f;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px}
+        .title h1{font-size:28px;font-weight:700;background:linear-gradient(135deg,#1e3a5f,#2a4d6e);-webkit-background-clip:text;background-clip:text;color:transparent}
+        .part-badge{background:#ffcc00;color:#1e3a5f;padding:6px 18px;border-radius:40px;font-weight:700;font-size:18px}
+        .sub{color:#4a627a;margin-top:8px;font-size:15px;font-weight:500;display:flex;gap:28px;flex-wrap:wrap}
+        .instructions{background:#f0f4f9;padding:14px 20px;border-radius:20px;margin:20px 0 24px 0;font-size:15px;font-weight:500;color:#1e4663;border-left:5px solid #ffcc00}
+        .one-word{background:#ffdd56;padding:4px 12px;border-radius:30px;font-family:monospace;font-weight:bold;font-size:14px;white-space:nowrap}
+        .main-title{text-align:center;margin:16px 0 28px 0}
+        .main-title h2{font-size:26px;font-weight:800;background:linear-gradient(135deg,#1e3a5f,#3b6e9e);-webkit-background-clip:text;background-clip:text;color:transparent}
+        .notes-container{display:flex;flex-direction:column;gap:32px;margin-top:12px}
+        .section-card{background:#fefefe;border-radius:28px;border:1px solid #e2edf2;overflow:hidden}
+        .section-title{background:#f8fafd;padding:16px 24px;font-size:18px;font-weight:700;color:#1f4a6e;border-bottom:2px solid #e0e9f0}
+        .section-content{padding:20px 28px 24px}
+        .bullet-item{margin-bottom:14px;font-size:16px;line-height:1.6;color:#1c2e40;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px}
+        .bullet-marker{font-weight:600;margin-right:8px;color:#1e3a5f;font-size:18px}
+        .bullet-text{flex:1;font-weight:500}
+        .number-badge{background:#eef2f7;border-radius:30px;width:30px;height:30px;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:#2c6280;margin:0 4px;flex-shrink:0}
+        input.answer-input{background:#fffef7;border:1.5px solid #d4dee8;border-radius:12px;padding:7px 12px;font-size:15px;font-weight:500;width:150px;font-family:'Segoe UI',monospace;color:#1f3b4c;transition:all 0.2s;display:inline-block;margin:0 3px}
+        input.answer-input.has-value{background:#e8f5e9;border-color:#4caf50;color:#2e7d32}
+        input.answer-input:focus{outline:none;border-color:#f5c542;background:#fffdf5;box-shadow:0 0 0 3px rgba(245,182,66,0.2)}
+        input.answer-input.correct-highlight{background:#c8e6c9!important;border-color:#2e7d32!important}
+        input.answer-input.incorrect-highlight{background:#ffcdd2!important;border-color:#c62828!important}
+        .map-label-input{width:64px;background:#fffef7;border:1.5px solid #d4dee8;border-radius:10px;padding:6px 10px;font-size:15px;font-weight:700;font-family:'Segoe UI',monospace;color:#1f3b4c;text-align:center;text-transform:uppercase;transition:all 0.2s;display:inline-block;margin:0 3px}
+        .map-label-input.has-value{background:#e8f5e9;border-color:#4caf50;color:#2e7d32}
+        .map-label-input:focus{outline:none;border-color:#f5c542;background:#fffdf5;box-shadow:0 0 0 3px rgba(245,182,66,0.2)}
+        .map-label-input.correct-highlight{background:#c8e6c9!important;border-color:#2e7d32!important}
+        .map-label-input.incorrect-highlight{background:#ffcdd2!important;border-color:#c62828!important}
+        .question-block{margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid #f0f4f9}
+        .question-block:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+        .question-number{display:inline-flex;align-items:center;justify-content:center;background:#eef2f7;border-radius:30px;width:32px;height:32px;font-weight:700;font-size:14px;color:#2c6280;margin-right:8px;flex-shrink:0}
+        .question-text{font-weight:500;font-size:16px;color:#1c2e40;margin-bottom:10px;display:flex;align-items:flex-start;gap:4px;flex-wrap:wrap}
+        .mcq-option{display:flex;align-items:center;gap:12px;padding:10px 16px;margin-bottom:6px;border-radius:12px;cursor:pointer;transition:all 0.15s;border:1.5px solid transparent;background:#fafbfc}
+        .mcq-option:hover{background:#fef9e7;border-color:#f5c542}
+        .mcq-option.selected .mcq-radio{border-color:#ffcc00;background:#ffcc00}
+        .mcq-option.selected .mcq-radio-inner{background:white}
+        .mcq-option.correct-highlight{background:#c8e6c9!important;border-color:#2e7d32!important}
+        .mcq-option.incorrect-highlight{background:#ffcdd2!important;border-color:#c62828!important}
+        .mcq-radio{width:22px;height:22px;border-radius:50%;border:2px solid #cbd5e1;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:transparent}
+        .mcq-radio-inner{width:10px;height:10px;border-radius:50%;background:transparent}
+        .mcq-label{font-weight:500;font-size:16px;color:#1c2e40}
+        .mcq-letter{font-weight:700;color:#1e3a5f;margin-right:6px}
+        .matching-grid{display:grid;grid-template-columns:1fr 220px;gap:24px;align-items:start;margin:16px 0}
+        .matching-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #eef2f7;font-size:15px;font-weight:500;color:#1c2e40}
+        .matching-row:last-child{border-bottom:none}
+        .matching-qnum{font-weight:700;color:#1e3a5f;min-width:32px}
+        .matching-label{flex:1}
+        .options-box{background:#f0f6ff;border:2px solid #c3d9f5;border-radius:16px;padding:16px;position:sticky;top:80px}
+        .options-box .options-title{font-weight:700;color:#1e3a5f;font-size:14px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid #ffcc00;display:block}
+        .option-item{display:flex;gap:10px;font-size:13px;font-weight:600;color:#1c2e40;padding:5px 0;border-bottom:1px solid #ddeeff}
+        .option-item:last-child{border-bottom:none}
+        .option-letter{font-weight:800;color:#1e3a5f;min-width:18px}
+        @media(max-width:700px){.matching-grid{grid-template-columns:1fr}.options-box{position:static}}
+        .matching-items-list{background:#f8fafd;border-radius:20px;padding:16px;border:1px solid #e2edf2}
+        .matching-items-list h4{font-size:15px;font-weight:700;color:#1e3a5f;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #ffcc00;display:inline-block}
+        .matching-drag-item{background:#fff;border:1.5px solid #d4dee8;border-radius:14px;padding:9px 12px;margin-bottom:8px;cursor:grab;display:flex;align-items:center;gap:10px;font-weight:500;transition:all 0.2s}
+        .matching-drag-item:hover{border-color:#ffcc00;background:#fffef7}
+        .matching-drag-item.dragging{opacity:0.4}
+        .drag-letter-badge{display:inline-flex;align-items:center;justify-content:center;background:#1e3a5f;color:#fff;border-radius:50%;width:26px;height:26px;font-weight:700;font-size:12px;flex-shrink:0}
+        .drag-description{font-weight:500;font-size:13px;color:#1c2e40}
+        .matching-drop-zone{background:#f8fafd;border-radius:20px;padding:20px;border:1px solid #e2edf2}
+        .matching-drop-zone h4{font-size:15px;font-weight:700;color:#1e3a5f;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid #ffcc00;display:inline-block}
+        .matching-drop-slot{background:#fff;border:2px dashed #cbd5e1;border-radius:14px;padding:12px 16px;margin-bottom:10px;min-height:56px;display:flex;align-items:center;gap:12px;transition:all 0.2s}
+        .matching-drop-slot.filled{border:2px solid #4caf50;background:#e8f5e9}
+        .matching-drop-slot.drag-over-drop{border-color:#ffcc00;background:#fff8e1}
+        .matching-drop-slot.correct-highlight{background:#c8e6c9!important;border-color:#2e7d32!important}
+        .matching-drop-slot.incorrect-highlight{background:#ffcdd2!important;border-color:#c62828!important}
+        .slot-label{font-weight:700;color:#1e3a5f;font-size:14px;flex:1}
+        .slot-value{color:#2e7d32;font-weight:500;font-size:13px}
+        .remove-btn{background:#ffebee;border:none;border-radius:20px;padding:3px 10px;font-size:11px;cursor:pointer;color:#c62828;flex-shrink:0}
+        .remove-btn:hover{background:#ffcdd2}
+        .action-buttons{margin-top:40px;display:flex;justify-content:space-between;align-items:center;gap:18px;border-top:1px solid #e2edf2;padding-top:28px;flex-wrap:wrap}
+        .action-buttons .left-group{display:flex;align-items:center;gap:12px}
+        .action-buttons .right-group{display:flex;gap:18px}
+        .telegram-link{display:flex;align-items:center;gap:8px;background:#e8f0fc;color:#1e3a5f;padding:10px 20px;border-radius:40px;font-weight:600;font-size:14px;text-decoration:none;border:1px solid rgba(30,58,95,0.12)}
+        .telegram-link:hover{background:#1e3a5f;color:white}
+        .telegram-link svg{width:20px;height:20px;fill:currentColor}
+        .btn{border:none;background:#eef2f7;padding:10px 24px;border-radius:40px;font-weight:600;font-size:14px;cursor:pointer;color:#2a577b}
+        .btn-primary{background:#ffcc00;color:#000}
+        .btn-primary:hover{background:#0f2c48;color:white}
+        .btn:hover{background:#e2e8f0}
+        .worksheet-page{display:none}
+        .worksheet-page.active{display:block}
+        .modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;z-index:1000}
+        .modal-content{background:white;border-radius:28px;max-width:550px;width:90%;padding:28px;box-shadow:0 20px 35px rgba(0,0,0,0.2);text-align:center}
+        .modal-content h3{font-size:26px;margin-bottom:16px;color:#1e3a5f}
+        .score-details{background:#f8fafd;border-radius:20px;padding:16px;margin:20px 0;max-height:350px;overflow-y:auto;text-align:left}
+        .score-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #e2e8f0;font-size:14px;flex-wrap:wrap;gap:4px}
+        .score-row.correct{color:#2e7d32}
+        .score-row.incorrect{color:#c62828}
+        .modal-close{background:#1e3a5f;color:white;border:none;padding:10px 24px;border-radius:40px;font-weight:600;cursor:pointer;margin-top:8px}
+        @media(max-width:750px){.worksheet{padding:20px 16px 32px}.action-buttons{flex-direction:column;align-items:stretch}.action-buttons .left-group,.action-buttons .right-group{justify-content:center}.btn{padding:8px 16px;font-size:13px}input.answer-input{width:120px;font-size:14px}.bullet-item{flex-direction:column;margin-bottom:20px}}
+    </style>
+</head>
+<body>
+<div class="botanical-background"><div class="vein-lines"></div><div class="leaf-whispers"></div><div class="floating-spores"></div><div class="marble-flow"></div><div class="ripple-rings"></div><div class="soft-vignette"></div></div>
+<div class="answer-status-bar" id="answerStatusBar"><div class="status-header"><span>📝</span><div class="status-title">ANSWERS</div><div class="completed-badge" id="completedCountBadge">0/10</div></div><div class="status-grid" id="statusGrid"></div><div class="status-footer">click to jump</div></div>
+<div class="nav-buttons"><button class="nav-btn" id="prevBtn"><svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg></button><button class="nav-btn" id="nextBtn"><svg viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/></svg></button></div>
+<div class="main-container">
+    <div class="sticky-top-bar"><div class="top-bar"><div class="logo-area"><img src="https://i.postimg.cc/L4VR0pK6/Loggg.jpg" alt="Logo" class="logo-img" onerror="this.style.display='none'"><div class="logo-text">Elites Learning Center</div></div><div class="waveform-player-compact" id="waveformPlayerCompact"><button class="skip-btn" id="skipBackBtn"><svg viewBox="0 0 24 24" width="20" height="20" fill="#1e3a5f"><path d="M11.99 5V1l-5 5 5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6h-2c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/></svg></button><button class="waveform-play-btn" id="waveformPlayBtn"><svg id="waveformIcon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button><button class="skip-btn" id="skipFwdBtn"><svg viewBox="0 0 24 24" width="20" height="20" fill="#1e3a5f"><path d="M12.01 5V1l5 5-5 5V7c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6h2c0 4.42-3.58 8-8 8s-8-3.58-8-8 3.58-8 8-8z"/></svg></button><div class="waveform-wrapper-compact" id="waveformContainerCompact"><canvas id="bgCanvasCompact"></canvas><canvas id="progressCanvasCompact"></canvas></div><span class="audio-time-display" id="audioTimeDisplay">0:00 / 0:00</span></div><div class="right-controls"><div class="volume-controller"><button class="volume-icon-btn" id="volumeMuteBtn"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button><input type="range" id="volumeSlider" class="volume-slider" min="0" max="100" value="70" step="1"></div><button class="fullscreen-btn" id="fullscreenBtn"><span>⛶</span><span id="fsText">Full Screen</span></button></div></div></div>
+    <div class="page-tabs"><button class="page-tab active" data-page="1">Part 1</button><button class="page-tab" data-page="2">Part 2</button><button class="page-tab" data-page="3">Part 3</button><button class="page-tab" data-page="4">Part 4</button></div>
+
+
+    <!-- ===== PAGE 1: Weekend Course Booking Form ===== -->
+    <div class="worksheet-page active" id="page1">
+        <div class="worksheet">
+            <div class="header">
+                <div class="title"><h1>Listening</h1><div class="part-badge">PART 1</div></div>
+                <div class="sub"><span>📋 Questions 1–10</span><span>✍️ Note completion</span><span>🔤 Write <span class="one-word">ONE WORD AND/OR A NUMBER</span></span></div>
+            </div>
+            <div class="instructions"><p><span>📢</span> Complete the notes below. Write <strong class="one-word">ONE WORD AND/OR A NUMBER</strong> for each answer.</p></div>
+            <div class="main-title"><h2>Weekend Course Booking Form</h2></div>
+            <div class="notes-container">
+                <div class="section-card">
+                    <div class="section-title">Course Details</div>
+                    <div class="section-content">
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">Booking for: <strong>a guitar workshop</strong></span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">Start date: <span class="number-badge">1</span><input type="text" class="answer-input p1-input" id="p1_ans1" placeholder="Answer" maxlength="30" autocomplete="off"></span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">Course code: <span class="number-badge">2</span><input type="text" class="answer-input p1-input" id="p1_ans2" placeholder="Answer" maxlength="30" autocomplete="off"></span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">Previous course attended: Editing <span class="number-badge">3</span><input type="text" class="answer-input p1-input" id="p1_ans3" placeholder="Answer" maxlength="30" autocomplete="off"></span></div>
+                    </div>
+                </div>
+                <div class="section-card">
+                    <div class="section-title">Personal Information</div>
+                    <div class="section-content">
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">Name: Nick <span class="number-badge">4</span><input type="text" class="answer-input p1-input" id="p1_ans4" placeholder="Answer" maxlength="30" autocomplete="off"></span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">Address: 27 Hawthorn <span class="number-badge">5</span><input type="text" class="answer-input p1-input" id="p1_ans5" placeholder="Answer" maxlength="30" autocomplete="off">, Bristol, BS4, 2QG</span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">Contact number: 07707 438 297</span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">Age: 26</span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">Occupation: <span class="number-badge">6</span><input type="text" class="answer-input p1-input" id="p1_ans6" placeholder="Answer" maxlength="30" autocomplete="off"></span></div>
+                    </div>
+                </div>
+
+                <div class="section-card">
+                    <div class="section-title">Preferences &amp; Requests</div>
+                    <div class="section-content">
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">Dietary requests: no <span class="number-badge">7</span><input type="text" class="answer-input p1-input" id="p1_ans7" placeholder="Answer" maxlength="30" autocomplete="off"></span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">One-to-one lesson selected: <span class="number-badge">8</span><input type="text" class="answer-input p1-input" id="p1_ans8" placeholder="Answer" maxlength="30" autocomplete="off"> guitar</span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">First heard about us from: a <span class="number-badge">9</span><input type="text" class="answer-input p1-input" id="p1_ans9" placeholder="Answer" maxlength="30" autocomplete="off"></span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">Additional request: would like <span class="number-badge">10</span><input type="text" class="answer-input p1-input" id="p1_ans10" placeholder="Answer" maxlength="30" autocomplete="off"> if possible</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <div class="left-group"><a href="https://t.me/Elites_LC" class="telegram-link" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.11.11 0 00-.05-.2c-.07-.05-.17-.03-.25-.02-.11.02-1.84 1.17-5.2 3.44-.49.34-.94.5-1.34.49-.44-.01-1.29-.25-1.92-.46-.77-.25-1.39-.38-1.33-.81.03-.22.33-.45 1.13-.68 4.45-1.94 7.42-3.22 8.9-3.83.24-.1.56-.22.77-.22.14 0 .38.06.38.34 0 .06-.01.13-.03.19z"/></svg>Telegram</a></div>
+                <div class="right-group"><button class="btn clear-btn" data-page="1">🗑️ Clear all answers</button><button class="btn btn-primary check-btn" data-page="1">✅ Check / Submit Answers</button></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ===== PAGE 2: Denford Festival ===== -->
+    <div class="worksheet-page" id="page2">
+        <div class="worksheet">
+            <div class="header">
+                <div class="title"><h1>Listening</h1><div class="part-badge">PART 2</div></div>
+                <div class="sub"><span>📋 Questions 11–20</span><span>✍️ Q11–15: Matching &nbsp;|&nbsp; Q16–20: Choose A, B or C</span></div>
+            </div>
+            <div class="main-title"><h2>Denford Festival</h2></div>
+            <div class="notes-container">
+                <!-- Q11-15 Drag & Drop Matching -->
+                <div class="section-card">
+                    <div class="section-title">Questions 11–15 — What attraction does each area of the festival have?</div>
+                    <div class="section-content">
+                        <p style="margin-bottom:16px;color:#4a627a;font-weight:500;">Drag each attraction from the right panel and drop it onto the correct area on the left.</p>
+                        <div class="matching-grid" id="matchingGridP2">
+                            <div class="matching-drop-zone" id="dropZonesP2">
+                                <h4>📍 Areas</h4>
+                                <div id="p2dropZone11" class="matching-drop-slot" data-q="11"><span class="slot-label">11. Bridge Street</span><span class="slot-value" id="p2slotValue11"></span><button class="remove-btn" style="display:none;">✖</button></div>
+                                <div id="p2dropZone12" class="matching-drop-slot" data-q="12"><span class="slot-label">12. King's Park</span><span class="slot-value" id="p2slotValue12"></span><button class="remove-btn" style="display:none;">✖</button></div>
+                                <div id="p2dropZone13" class="matching-drop-slot" data-q="13"><span class="slot-label">13. Oakvale School</span><span class="slot-value" id="p2slotValue13"></span><button class="remove-btn" style="display:none;">✖</button></div>
+                                <div id="p2dropZone14" class="matching-drop-slot" data-q="14"><span class="slot-label">14. Green Road</span><span class="slot-value" id="p2slotValue14"></span><button class="remove-btn" style="display:none;">✖</button></div>
+                                <div id="p2dropZone15" class="matching-drop-slot" data-q="15"><span class="slot-label">15. Sun Lane</span><span class="slot-value" id="p2slotValue15"></span><button class="remove-btn" style="display:none;">✖</button></div>
+                            </div>
+                            <div class="matching-items-list" id="draggableItemsP2">
+                                <h4>🎯 Attractions</h4>
+                                <div class="matching-drag-item" draggable="true" data-value="A" data-description="talks about gardening"><span class="drag-letter-badge">A</span><span class="drag-description">talks about gardening</span></div>
+                                <div class="matching-drag-item" draggable="true" data-value="B" data-description="live music"><span class="drag-letter-badge">B</span><span class="drag-description">live music</span></div>
+                                <div class="matching-drag-item" draggable="true" data-value="C" data-description="an art exhibition"><span class="drag-letter-badge">C</span><span class="drag-description">an art exhibition</span></div>
+                                <div class="matching-drag-item" draggable="true" data-value="D" data-description="a children's playground"><span class="drag-letter-badge">D</span><span class="drag-description">a children's playground</span></div>
+                                <div class="matching-drag-item" draggable="true" data-value="E" data-description="evening entertainment"><span class="drag-letter-badge">E</span><span class="drag-description">evening entertainment</span></div>
+                                <div class="matching-drag-item" draggable="true" data-value="F" data-description="a competition for adults"><span class="drag-letter-badge">F</span><span class="drag-description">a competition for adults</span></div>
+                                <div class="matching-drag-item" draggable="true" data-value="G" data-description="vegetable market"><span class="drag-letter-badge">G</span><span class="drag-description">vegetable market</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q16-20 MCQ -->
+                <div class="section-card">
+                    <div class="section-title">Questions 16–20 — Choose the correct letter, A, B, or C.</div>
+                    <div class="section-content">
+                        <div class="question-block" id="q16Block">
+                            <div class="question-text"><span class="question-number">16</span>What does Sam say about festival tickets?</div>
+                            <div class="mcq-option" data-q="16" data-value="A"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><div class="mcq-label"><span class="mcq-letter">A</span>They allow you to get into all the festival events.</div></div>
+                            <div class="mcq-option" data-q="16" data-value="B"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><div class="mcq-label"><span class="mcq-letter">B</span>They are more expensive to buy on the day.</div></div>
+                            <div class="mcq-option" data-q="16" data-value="C"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><div class="mcq-label"><span class="mcq-letter">C</span>They have nearly all been sold.</div></div>
+                        </div>
+                        <div class="question-block" id="q17Block">
+                            <div class="question-text"><span class="question-number">17</span>On the last night of the festival, visitors will be able to…</div>
+                            <div class="mcq-option" data-q="17" data-value="A"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><div class="mcq-label"><span class="mcq-letter">A</span>take part in a dance.</div></div>
+                            <div class="mcq-option" data-q="17" data-value="B"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><div class="mcq-label"><span class="mcq-letter">B</span>go to a theatre performance.</div></div>
+                            <div class="mcq-option" data-q="17" data-value="C"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><div class="mcq-label"><span class="mcq-letter">C</span>watch some fireworks.</div></div>
+                        </div>
+                        <div class="question-block" id="q18Block">
+                            <div class="question-text"><span class="question-number">18</span>What will be provided for international visitors?</div>
+                            <div class="mcq-option" data-q="18" data-value="A"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><div class="mcq-label"><span class="mcq-letter">A</span>discounts on accommodation.</div></div>
+                            <div class="mcq-option" data-q="18" data-value="B"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><div class="mcq-label"><span class="mcq-letter">B</span>tours of the local area.</div></div>
+                            <div class="mcq-option" data-q="18" data-value="C"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><div class="mcq-label"><span class="mcq-letter">C</span>a guide written in different languages.</div></div>
+                        </div>
+
+                        <div class="question-block" id="q19Block">
+                            <div class="question-text"><span class="question-number">19</span>What information is given about car park A?</div>
+                            <div class="mcq-option" data-q="19" data-value="A"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><div class="mcq-label"><span class="mcq-letter">A</span>It is bigger than car park B.</div></div>
+                            <div class="mcq-option" data-q="19" data-value="B"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><div class="mcq-label"><span class="mcq-letter">B</span>It is closer to town than car park B.</div></div>
+                            <div class="mcq-option" data-q="19" data-value="C"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><div class="mcq-label"><span class="mcq-letter">C</span>It will close earlier than car park B.</div></div>
+                        </div>
+                        <div class="question-block" id="q20Block">
+                            <div class="question-text"><span class="question-number">20</span>What change have the organisers made to the programme this year?</div>
+                            <div class="mcq-option" data-q="20" data-value="A"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><div class="mcq-label"><span class="mcq-letter">A</span>replacing the programme with an app.</div></div>
+                            <div class="mcq-option" data-q="20" data-value="B"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><div class="mcq-label"><span class="mcq-letter">B</span>reducing the number of programmes printed.</div></div>
+                            <div class="mcq-option" data-q="20" data-value="C"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><div class="mcq-label"><span class="mcq-letter">C</span>introducing a charge for the programmes.</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <div class="left-group"><a href="https://t.me/Elites_LC" class="telegram-link" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.11.11 0 00-.05-.2c-.07-.05-.17-.03-.25-.02-.11.02-1.84 1.17-5.2 3.44-.49.34-.94.5-1.34.49-.44-.01-1.29-.25-1.92-.46-.77-.25-1.39-.38-1.33-.81.03-.22.33-.45 1.13-.68 4.45-1.94 7.42-3.22 8.9-3.83.24-.1.56-.22.77-.22.14 0 .38.06.38.34 0 .06-.01.13-.03.19z"/></svg>Telegram</a></div>
+                <div class="right-group"><button class="btn clear-btn" data-page="2">🗑️ Clear all answers</button><button class="btn btn-primary check-btn" data-page="2">✅ Check / Submit Answers</button></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ===== PAGE 3: Action Research Course for Practising Teachers ===== -->
+    <div class="worksheet-page" id="page3">
+        <div class="worksheet">
+            <div class="header">
+                <div class="title"><h1>Listening</h1><div class="part-badge">PART 3</div></div>
+                <div class="sub"><span>📋 Questions 21–30</span><span>✍️ Note &amp; Table completion</span><span>🔤 Write <span class="one-word">NO MORE THAN TWO WORDS</span></span></div>
+            </div>
+            <div class="instructions"><p><span>📢</span> Complete the notes and tables below. Write <strong class="one-word">NO MORE THAN TWO WORDS</strong> for each answer.</p></div>
+            <div class="main-title"><h2>Action Research Course for Practising Teachers</h2></div>
+            <div class="notes-container">
+                <!-- Q21-23 Note completion -->
+                <div class="section-card">
+                    <div class="section-title">Questions 21–23 — Complete the notes.</div>
+                    <div class="section-content">
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">Course leader: Alan Cumner (get his recent book called '<span class="number-badge">21</span><input type="text" class="answer-input p3-input" id="p3_ans21" placeholder="Answer" maxlength="40" autocomplete="off">')</span></div>
+                        <p style="font-weight:700;color:#1e3a5f;margin:18px 0 12px 0;font-size:16px;">Course objectives — to develop skills in:</p>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">using different research techniques</span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text">researching as part of a <span class="number-badge">22</span><input type="text" class="answer-input p3-input" id="p3_ans22" placeholder="Answer" maxlength="40" autocomplete="off"></span></div>
+                        <div class="bullet-item"><span class="bullet-marker">●</span><span class="bullet-text"><span class="number-badge">23</span><input type="text" class="answer-input p3-input" id="p3_ans23" placeholder="Answer" maxlength="40" autocomplete="off"> (in a collaborative culture)</span></div>
+                    </div>
+                </div>
+
+                <!-- Q24-27 Table: Observational Techniques -->
+                <div class="section-card">
+                    <div class="section-title">Questions 24–27 — Complete the table.</div>
+                    <div class="section-content">
+                        <div style="overflow-x:auto;">
+                            <table style="width:100%;border-collapse:collapse;font-size:15px;min-width:480px;">
+                                <thead>
+                                    <tr style="background:#1e3a5f;color:#fff;">
+                                        <th style="padding:14px 16px;border-radius:12px 0 0 0;text-align:left;">Observational Techniques</th>
+                                        <th style="padding:14px 16px;border-radius:0 12px 0 0;text-align:left;">Additional Information</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="background:#f8fafd;border-bottom:1px solid #e2edf2;">
+                                        <td style="padding:14px 16px;font-weight:600;color:#1e3a5f;">Using observation checklists</td>
+                                        <td style="padding:14px 16px;">To record aspects of lesson, e.g. <span class="number-badge">24</span><input type="text" class="answer-input p3-input" id="p3_ans24" placeholder="Answer" maxlength="40" autocomplete="off"> of pupils</td>
+                                    </tr>
+                                    <tr style="background:#fff;border-bottom:1px solid #e2edf2;">
+                                        <td style="padding:14px 16px;font-weight:600;color:#1e3a5f;">Writing a <span class="number-badge">25</span><input type="text" class="answer-input p3-input" id="p3_ans25" placeholder="Answer" maxlength="40" autocomplete="off"></td>
+                                        <td style="padding:14px 16px;">Used to improve skill of reflection</td>
+                                    </tr>
+                                    <tr style="background:#f8fafd;">
+                                        <td style="padding:14px 16px;font-weight:600;color:#1e3a5f;"><span class="number-badge">26</span><input type="text" class="answer-input p3-input" id="p3_ans26" placeholder="Answer" maxlength="40" autocomplete="off"></td>
+                                        <td style="padding:14px 16px;">Try out on fellow students (in classroom <span class="number-badge">27</span><input type="text" class="answer-input p3-input" id="p3_ans27" placeholder="Answer" maxlength="40" autocomplete="off">)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q28-30 Table: Non-Observational Techniques -->
+                <div class="section-card">
+                    <div class="section-title">Questions 28–30 — Complete the table.</div>
+                    <div class="section-content">
+                        <div style="overflow-x:auto;">
+                            <table style="width:100%;border-collapse:collapse;font-size:15px;min-width:480px;">
+                                <thead>
+                                    <tr style="background:#1e3a5f;color:#fff;">
+                                        <th style="padding:14px 16px;border-radius:12px 0 0 0;text-align:left;">Non-Observational Techniques</th>
+                                        <th style="padding:14px 16px;border-radius:0 12px 0 0;text-align:left;">Additional Information</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="background:#f8fafd;border-bottom:1px solid #e2edf2;">
+                                        <td style="padding:14px 16px;font-weight:600;color:#1e3a5f;">Analysing <span class="number-badge">28</span><input type="text" class="answer-input p3-input" id="p3_ans28" placeholder="Answer" maxlength="40" autocomplete="off"></td>
+                                        <td style="padding:14px 16px;">Use statistics based on own students</td>
+                                    </tr>
+                                    <tr style="background:#fff;border-bottom:1px solid #e2edf2;">
+                                        <td style="padding:14px 16px;font-weight:600;color:#1e3a5f;">Using questionnaires</td>
+                                        <td style="padding:14px 16px;">Use the <span class="number-badge">29</span><input type="text" class="answer-input p3-input" id="p3_ans29" placeholder="Answer" maxlength="40" autocomplete="off"> to find respondents</td>
+                                    </tr>
+                                    <tr style="background:#f8fafd;">
+                                        <td style="padding:14px 16px;font-weight:600;color:#1e3a5f;">Using <span class="number-badge">30</span><input type="text" class="answer-input p3-input" id="p3_ans30" placeholder="Answer" maxlength="40" autocomplete="off"></td>
+                                        <td style="padding:14px 16px;">Own choice of respondents</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <div class="left-group"><a href="https://t.me/Elites_LC" class="telegram-link" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.11.11 0 00-.05-.2c-.07-.05-.17-.03-.25-.02-.11.02-1.84 1.17-5.2 3.44-.49.34-.94.5-1.34.49-.44-.01-1.29-.25-1.92-.46-.77-.25-1.39-.38-1.33-.81.03-.22.33-.45 1.13-.68 4.45-1.94 7.42-3.22 8.9-3.83.24-.1.56-.22.77-.22.14 0 .38.06.38.34 0 .06-.01.13-.03.19z"/></svg>Telegram</a></div>
+                <div class="right-group"><button class="btn clear-btn" data-page="3">🗑️ Clear all answers</button><button class="btn btn-primary check-btn" data-page="3">✅ Check / Submit Answers</button></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ===== PAGE 4: Digital Technology and Education ===== -->
+    <div class="worksheet-page" id="page4">
+        <div class="worksheet">
+            <div class="header">
+                <div class="title"><h1>Listening</h1><div class="part-badge">PART 4</div></div>
+                <div class="sub"><span>📋 Questions 31–40</span><span>✍️ Q31–33: Choose A, B or C &nbsp;|&nbsp; Q34–40: Matching (A/B/C)</span></div>
+            </div>
+            <div class="main-title"><h2>Digital Technology and Education</h2></div>
+            <div class="notes-container">
+                <!-- Q31-33 MCQ -->
+                <div class="section-card">
+                    <div class="section-title">Questions 31–33 — Choose the correct letter, A, B, or C.</div>
+                    <div class="section-content">
+                        <div class="question-block" id="q31Block">
+                            <div class="question-text"><span class="question-number">31</span>What impact does Marc Prensky believe digital technology has had on the young people?</div>
+                            <div class="mcq-option" data-q="31" data-value="A"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><div class="mcq-label"><span class="mcq-letter">A</span>It has altered their thinking patterns.</div></div>
+                            <div class="mcq-option" data-q="31" data-value="B"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><div class="mcq-label"><span class="mcq-letter">B</span>It has harmed their physical development.</div></div>
+                            <div class="mcq-option" data-q="31" data-value="C"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><div class="mcq-label"><span class="mcq-letter">C</span>It has limited their brain capacity.</div></div>
+                        </div>
+                        <div class="question-block" id="q32Block">
+                            <div class="question-text"><span class="question-number">32</span>Digital immigrants tend to access computers…</div>
+                            <div class="mcq-option" data-q="32" data-value="A"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><div class="mcq-label"><span class="mcq-letter">A</span>using their native language.</div></div>
+                            <div class="mcq-option" data-q="32" data-value="B"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><div class="mcq-label"><span class="mcq-letter">B</span>less efficiently than young people.</div></div>
+                            <div class="mcq-option" data-q="32" data-value="C"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><div class="mcq-label"><span class="mcq-letter">C</span>for less important information.</div></div>
+                        </div>
+                        <div class="question-block" id="q33Block">
+                            <div class="question-text"><span class="question-number">33</span>What example is given of having a 'digital accent'?</div>
+                            <div class="mcq-option" data-q="33" data-value="A"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><div class="mcq-label"><span class="mcq-letter">A</span>having less effective typing skills</div></div>
+                            <div class="mcq-option" data-q="33" data-value="B"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><div class="mcq-label"><span class="mcq-letter">B</span>doing things the old-fashioned way</div></div>
+                            <div class="mcq-option" data-q="33" data-value="C"><div class="mcq-radio"><div class="mcq-radio-inner"></div></div><div class="mcq-label"><span class="mcq-letter">C</span>being unable to understand instructions</div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q34-40 Matching with map-label-input -->
+                <div class="section-card">
+                    <div class="section-title">Questions 34–40 — Which theorist makes each point?</div>
+                    <div class="section-content">
+                        <p style="margin-bottom:16px;color:#4a627a;font-weight:500;">Write the correct letter, <strong>A</strong>, <strong>B</strong>, or <strong>C</strong>, next to each point.</p>
+                        <div style="background:#f0f6ff;border:2px solid #c3d9f5;border-radius:16px;padding:16px;margin-bottom:20px;">
+                            <span style="font-weight:700;color:#1e3a5f;font-size:14px;display:block;margin-bottom:8px;padding-bottom:8px;border-bottom:2px solid #ffcc00;">Theorists</span>
+                            <div style="display:flex;gap:24px;flex-wrap:wrap;font-size:14px;font-weight:600;color:#1c2e40;">
+                                <span><strong style="color:#1e3a5f;">A</strong> — Allen</span>
+                                <span><strong style="color:#1e3a5f;">B</strong> — James</span>
+                                <span><strong style="color:#1e3a5f;">C</strong> — Vander</span>
+                            </div>
+                        </div>
+                        <div class="question-block" id="q34Block">
+                            <div class="question-text"><span class="question-number">34</span>Current teaching methods don't work <input type="text" class="map-label-input p4-input" id="p4_ans34" placeholder="?" maxlength="1" autocomplete="off"></div>
+                        </div>
+                        <div class="question-block" id="q35Block">
+                            <div class="question-text"><span class="question-number">35</span>Many students don't understand computers <input type="text" class="map-label-input p4-input" id="p4_ans35" placeholder="?" maxlength="1" autocomplete="off"></div>
+                        </div>
+                        <div class="question-block" id="q36Block">
+                            <div class="question-text"><span class="question-number">36</span>Computer technology doesn't interest all students <input type="text" class="map-label-input p4-input" id="p4_ans36" placeholder="?" maxlength="1" autocomplete="off"></div>
+                        </div>
+                        <div class="question-block" id="q37Block">
+                            <div class="question-text"><span class="question-number">37</span>Students can still learn the traditional way <input type="text" class="map-label-input p4-input" id="p4_ans37" placeholder="?" maxlength="1" autocomplete="off"></div>
+                        </div>
+                        <div class="question-block" id="q38Block">
+                            <div class="question-text"><span class="question-number">38</span>Students still need to learn research skills <input type="text" class="map-label-input p4-input" id="p4_ans38" placeholder="?" maxlength="1" autocomplete="off"></div>
+                        </div>
+                        <div class="question-block" id="q39Block">
+                            <div class="question-text"><span class="question-number">39</span>We should use computer games to teach <input type="text" class="map-label-input p4-input" id="p4_ans39" placeholder="?" maxlength="1" autocomplete="off"></div>
+                        </div>
+                        <div class="question-block" id="q40Block">
+                            <div class="question-text"><span class="question-number">40</span>Computers can't replace educators <input type="text" class="map-label-input p4-input" id="p4_ans40" placeholder="?" maxlength="1" autocomplete="off"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <div class="left-group"><a href="https://t.me/Elites_LC" class="telegram-link" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.11.11 0 00-.05-.2c-.07-.05-.17-.03-.25-.02-.11.02-1.84 1.17-5.2 3.44-.49.34-.94.5-1.34.49-.44-.01-1.29-.25-1.92-.46-.77-.25-1.39-.38-1.33-.81.03-.22.33-.45 1.13-.68 4.45-1.94 7.42-3.22 8.9-3.83.24-.1.56-.22.77-.22.14 0 .38.06.38.34 0 .06-.01.13-.03.19z"/></svg>Telegram</a></div>
+                <div class="right-group"><button class="btn clear-btn" data-page="4">🗑️ Clear all answers</button><button class="btn btn-primary check-btn" data-page="4">✅ Check / Submit Answers</button></div>
+            </div>
+        </div>
+    </div>
+</div><!-- end main-container -->
+
+
+<script>
+// ===== ANSWER KEYS =====
+const answerKeys = {
+    1:{1:"july 18th",2:"q1632",3:"photographs",4:"poskitt",5:"way",6:"engineer",7:"fish",8:"blues",9:"magazine",10:"parking"},
+    2:{11:"C",12:"D",13:"F",14:"B",15:"A",16:"B",17:"A",18:"B",19:"A",20:"B"},
+    3:{21:"professional learning",22:"team",23:"presenting results",24:"behaviour",25:"diary",26:"video recording",27:"simulation",28:"test results",29:"internet",30:"interviews"},
+    4:{31:"A",32:"B",33:"B",34:"B",35:"C",36:"A",37:"B",38:"A",39:"B",40:"C"}
+};
+
+let currentPage=1;const totalPages=4;
+
+// Input refs
+const p1TextInputs={};
+for(let i=1;i<=10;i++) p1TextInputs[i]=document.getElementById('p1_ans'+i);
+
+const p2MCQ=[16,17,18,19,20];
+let matchingP2={11:"",12:"",13:"",14:"",15:""};
+
+const p3TextInputs={};
+for(let i=21;i<=30;i++) p3TextInputs[i]=document.getElementById('p3_ans'+i);
+
+const p4MCQ=[31,32,33];
+const p4MapInputs={};
+for(let i=34;i<=40;i++) p4MapInputs[i]=document.getElementById('p4_ans'+i);
+
+
+// Matching P2 slot logic
+function setMatchingSlotP2(qnum,value){
+    matchingP2[qnum]=value||"";
+    const slot=document.getElementById('p2dropZone'+qnum);
+    const vs=document.getElementById('p2slotValue'+qnum);
+    const rb=slot.querySelector('.remove-btn');
+    if(value){
+        const item=document.querySelector('#draggableItemsP2 .matching-drag-item[data-value="'+value+'"]');
+        vs.innerText=item?'— '+item.getAttribute('data-description'):value;
+        slot.classList.add('filled');rb.style.display="inline-block";
+        rb.onclick=(e)=>{e.stopPropagation();setMatchingSlotP2(qnum,"");refreshStatusBar();};
+    }else{vs.innerText="";slot.classList.remove('filled');rb.style.display="none";}
+    refreshStatusBar();
+}
+
+// Page switching
+function switchPage(p){
+    if(p<1||p>totalPages)return;
+    currentPage=p;
+    document.querySelectorAll('.page-tab').forEach(t=>t.classList.remove('active'));
+    document.querySelector('.page-tab[data-page="'+p+'"]').classList.add('active');
+    document.querySelectorAll('.worksheet-page').forEach(pg=>pg.classList.remove('active'));
+    document.getElementById('page'+p).classList.add('active');
+    updateAnswerStatusBar();
+    window.scrollTo({top:0,behavior:'smooth'});
+}
+document.querySelectorAll('.page-tab').forEach(tab=>tab.addEventListener('click',function(){switchPage(parseInt(this.getAttribute('data-page')));}));
+document.getElementById('prevBtn').addEventListener('click',()=>{if(currentPage>1)switchPage(currentPage-1);});
+document.getElementById('nextBtn').addEventListener('click',()=>{if(currentPage<totalPages)switchPage(currentPage+1);});
+
+
+// Get answer value for any question
+function getAnswerValue(q){
+    if(currentPage===1){
+        const i=p1TextInputs[q];return i?i.value.trim().toLowerCase():'';
+    }
+    if(currentPage===2){
+        if(q>=11&&q<=15) return (matchingP2[q]||'').toUpperCase();
+        if(q>=16){const b=document.getElementById('q'+q+'Block');const s=b?.querySelector('.mcq-option.selected');return s?s.getAttribute('data-value'):'';}
+        return '';
+    }
+    if(currentPage===3){
+        const i=p3TextInputs[q];return i?i.value.trim().toLowerCase():'';
+    }
+    if(currentPage===4){
+        if(q<=33){const b=document.getElementById('q'+q+'Block');const s=b?.querySelector('.mcq-option.selected');return s?s.getAttribute('data-value'):'';}
+        const i=p4MapInputs[q];return i?i.value.trim().toUpperCase():'';
+    }
+    return '';
+}
+
+function getAnswerValueForPage(q,pn){
+    if(pn===1){const i=p1TextInputs[q];return i?i.value.trim().toLowerCase():'';}
+    if(pn===2){
+        if(q>=11&&q<=15) return (matchingP2[q]||'').toUpperCase();
+        if(q>=16){const b=document.getElementById('q'+q+'Block');const s=b?.querySelector('.mcq-option.selected');return s?s.getAttribute('data-value'):'';}
+        return '';
+    }
+    if(pn===3){const i=p3TextInputs[q];return i?i.value.trim().toLowerCase():'';}
+    if(pn===4){
+        if(q<=33){const b=document.getElementById('q'+q+'Block');const s=b?.querySelector('.mcq-option.selected');return s?s.getAttribute('data-value'):'';}
+        const i=p4MapInputs[q];return i?i.value.trim().toUpperCase():'';
+    }
+    return '';
+}
+
+function isFilled(q){return getAnswerValue(q)!=='';}
+function isFilledForPage(q,pn){return getAnswerValueForPage(q,pn)!=='';}
+
+
+// Answer status bar
+function updateAnswerStatusBar(){
+    const sg=document.getElementById('statusGrid');if(!sg)return;
+    let fc=0,h='';const r={1:[1,10],2:[11,20],3:[21,30],4:[31,40]};const[s,e]=r[currentPage];
+    for(let i=s;i<=e;i++){const f=isFilled(i);if(f)fc++;h+='<div class="status-item" data-qnum="'+i+'"><div class="status-number '+(f?'filled':'empty')+'">'+i+'</div><div class="status-label">Q'+i+'</div></div>';}
+    sg.innerHTML=h;document.getElementById('completedCountBadge').innerText=fc+'/10';
+    document.querySelectorAll('.status-item').forEach(item=>item.addEventListener('click',function(){jumpToQuestion(parseInt(this.getAttribute('data-qnum')));}));
+}
+
+function jumpToQuestion(q){
+    let tp=q<=10?1:q<=20?2:q<=30?3:4;
+    if(currentPage!==tp)switchPage(tp);
+    setTimeout(()=>{
+        if(tp===1){const el=p1TextInputs[q];if(el){el.focus();el.scrollIntoView({behavior:'smooth',block:'center'});}}
+        else if(tp===2){
+            if(q<=15){const el=document.getElementById('p2dropZone'+q);if(el)el.scrollIntoView({behavior:'smooth',block:'center'});}
+            else{const el=document.getElementById('q'+q+'Block');if(el)el.scrollIntoView({behavior:'smooth',block:'center'});}
+        }
+        else if(tp===3){const el=p3TextInputs[q];if(el){el.focus();el.scrollIntoView({behavior:'smooth',block:'center'});}}
+        else{
+            if(q<=33){const el=document.getElementById('q'+q+'Block');if(el)el.scrollIntoView({behavior:'smooth',block:'center'});}
+            else{const el=p4MapInputs[q];if(el){el.focus();el.scrollIntoView({behavior:'smooth',block:'center'});}}
+        }
+    },100);
+}
+
+function refreshStatusBar(){updateAnswerStatusBar();}
+
+
+// Clear page
+function clearPage(pn){
+    if(!confirm('Clear all answers on this page?'))return;
+    if(pn===1){
+        for(let i=1;i<=10;i++){if(p1TextInputs[i]){p1TextInputs[i].value='';p1TextInputs[i].classList.remove('has-value','correct-highlight','incorrect-highlight');}}
+    } else if(pn===2){
+        for(let i=11;i<=15;i++){setMatchingSlotP2(i,"");const slot=document.getElementById('p2dropZone'+i);if(slot)slot.classList.remove('correct-highlight','incorrect-highlight');}
+        document.querySelectorAll('#page2 .mcq-option').forEach(o=>o.classList.remove('selected','correct-highlight','incorrect-highlight'));
+    } else if(pn===3){
+        for(let i=21;i<=30;i++){if(p3TextInputs[i]){p3TextInputs[i].value='';p3TextInputs[i].classList.remove('has-value','correct-highlight','incorrect-highlight');}}
+    } else if(pn===4){
+        document.querySelectorAll('#page4 .mcq-option').forEach(o=>o.classList.remove('selected','correct-highlight','incorrect-highlight'));
+        for(let i=34;i<=40;i++){if(p4MapInputs[i]){p4MapInputs[i].value='';p4MapInputs[i].classList.remove('has-value','correct-highlight','incorrect-highlight');}}
+    }
+    refreshStatusBar();
+}
+
+
+// Check page
+function checkPage(pn){
+    if(!confirm('Submit answers for checking?'))return;
+    let cc=0;const res={};const key=answerKeys[pn];const r={1:[1,10],2:[11,20],3:[21,30],4:[31,40]};const[s,e]=r[pn];
+    for(let i=s;i<=e;i++){
+        const u=getAnswerValueForPage(i,pn);const ck=(key[i]||'').toLowerCase();
+        const ic=(u.toLowerCase()===ck);if(ic)cc++;
+        res[i]={userAnswer:u||'(no answer)',correctAnswer:key[i],isCorrect:ic};
+        // highlight
+        if(pn===1){
+            const inp=p1TextInputs[i];if(inp){inp.classList.remove('correct-highlight','incorrect-highlight');if(u)inp.classList.add(ic?'correct-highlight':'incorrect-highlight');}
+        } else if(pn===2){
+            if(i<=15){const slot=document.getElementById('p2dropZone'+i);if(slot){slot.classList.remove('correct-highlight','incorrect-highlight');if(u)slot.classList.add(ic?'correct-highlight':'incorrect-highlight');}}
+            else{const b=document.getElementById('q'+i+'Block');b?.querySelectorAll('.mcq-option').forEach(o=>o.classList.remove('correct-highlight','incorrect-highlight'));if(u){const opt=b?.querySelector('.mcq-option[data-value="'+u.toUpperCase()+'"]');if(opt)opt.classList.add(ic?'correct-highlight':'incorrect-highlight');}}
+        } else if(pn===3){
+            const inp=p3TextInputs[i];if(inp){inp.classList.remove('correct-highlight','incorrect-highlight');if(u)inp.classList.add(ic?'correct-highlight':'incorrect-highlight');}
+        } else if(pn===4){
+            if(i<=33){const b=document.getElementById('q'+i+'Block');b?.querySelectorAll('.mcq-option').forEach(o=>o.classList.remove('correct-highlight','incorrect-highlight'));if(u){const opt=b?.querySelector('.mcq-option[data-value="'+u.toUpperCase()+'"]');if(opt)opt.classList.add(ic?'correct-highlight':'incorrect-highlight');}}
+            else{const inp=p4MapInputs[i];if(inp){inp.classList.remove('correct-highlight','incorrect-highlight');if(u)inp.classList.add(ic?'correct-highlight':'incorrect-highlight');}}
+        }
+    }
+    showModal(res,cc,pn);
+}
+
+
+function showModal(res,cc,pn){
+    const ex=document.querySelector('.modal-overlay');if(ex)ex.remove();
+    const modal=document.createElement('div');modal.className='modal-overlay';
+    const r={1:[1,10],2:[11,20],3:[21,30],4:[31,40]};const[s,e]=r[pn];
+    let d='<div class="modal-content"><h3>📊 Results: '+cc+' / 10 Correct</h3><div class="score-details">';
+    for(let i=s;i<=e;i++){const rr=res[i];const icon=rr.isCorrect?'✅':'❌';const extra=rr.isCorrect?'':' (Correct: "'+rr.correctAnswer+'")';d+='<div class="score-row '+(rr.isCorrect?'correct':'incorrect')+'"><span><strong>Q'+i+'</strong> Your: "'+rr.userAnswer+'"</span><span>'+icon+extra+'</span></div>';}
+    d+='</div><button class="modal-close" id="closeModalBtn">Close</button></div>';
+    modal.innerHTML=d;document.body.appendChild(modal);
+    document.getElementById('closeModalBtn').addEventListener('click',()=>modal.remove());
+    modal.addEventListener('click',e=>{if(e.target===modal)modal.remove();});
+}
+
+// MCQ click handlers
+document.querySelectorAll('.mcq-option').forEach(opt=>opt.addEventListener('click',function(){
+    const q=this.getAttribute('data-q');const b=document.getElementById('q'+q+'Block');
+    b.querySelectorAll('.mcq-option').forEach(o=>o.classList.remove('selected','correct-highlight','incorrect-highlight'));
+    this.classList.add('selected');refreshStatusBar();
+}));
+
+// Clear & Check button handlers
+document.querySelectorAll('.clear-btn').forEach(b=>b.addEventListener('click',function(){clearPage(parseInt(this.getAttribute('data-page')));}));
+document.querySelectorAll('.check-btn').forEach(b=>b.addEventListener('click',function(){checkPage(parseInt(this.getAttribute('data-page')));}));
+
+
+// Drag & Drop for P2 Q11-15
+(function initDragDropP2(){
+    const container=document.getElementById('draggableItemsP2');if(!container)return;
+    container.querySelectorAll('.matching-drag-item').forEach(drag=>{
+        drag.addEventListener('dragstart',e=>{e.dataTransfer.setData('text/plain',JSON.stringify({value:drag.getAttribute('data-value'),desc:drag.getAttribute('data-description')}));drag.classList.add('dragging');e.dataTransfer.effectAllowed='copy';});
+        drag.addEventListener('dragend',()=>drag.classList.remove('dragging'));
+    });
+    document.querySelectorAll('#dropZonesP2 .matching-drop-slot').forEach(zone=>{
+        zone.addEventListener('dragover',e=>{e.preventDefault();zone.classList.add('drag-over-drop');});
+        zone.addEventListener('dragleave',()=>zone.classList.remove('drag-over-drop'));
+        zone.addEventListener('drop',e=>{e.preventDefault();zone.classList.remove('drag-over-drop');const data=JSON.parse(e.dataTransfer.getData('text/plain'));setMatchingSlotP2(parseInt(zone.getAttribute('data-q')),data.value);});
+    });
+})();
+
+// Text input listeners for P1
+Object.values(p1TextInputs).forEach(inp=>{
+    if(!inp)return;
+    inp.addEventListener('input',function(){this.classList.remove('correct-highlight','incorrect-highlight');this.classList.toggle('has-value',this.value.trim()!=='');refreshStatusBar();});
+});
+// Text input listeners for P3
+Object.values(p3TextInputs).forEach(inp=>{
+    if(!inp)return;
+    inp.addEventListener('input',function(){this.classList.remove('correct-highlight','incorrect-highlight');this.classList.toggle('has-value',this.value.trim()!=='');refreshStatusBar();});
+});
+// Map-label input listeners for P4
+Object.values(p4MapInputs).forEach(inp=>{
+    if(!inp)return;
+    inp.addEventListener('input',function(){this.classList.remove('correct-highlight','incorrect-highlight');this.classList.toggle('has-value',this.value.trim()!=='');refreshStatusBar();});
+});
+
+
+// Audio Player
+const voiceAudio=new Audio('V9T4_Full.mp3');voiceAudio.volume=0.7;
+const wfBtn=document.getElementById('waveformPlayBtn'),wfIcon=document.getElementById('waveformIcon');
+const bgCv=document.getElementById('bgCanvasCompact'),prCv=document.getElementById('progressCanvasCompact');
+const wfCont=document.getElementById('waveformContainerCompact'),volSld=document.getElementById('volumeSlider'),volMute=document.getElementById('volumeMuteBtn');
+let isMuted=false,prevVol=0.7;
+function updateVolUI(){if(isMuted){volSld.value=0;voiceAudio.volume=0;}else{volSld.value=prevVol*100;voiceAudio.volume=prevVol;}volMute.querySelector('svg').innerHTML=(isMuted||voiceAudio.volume===0)?'<path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>':'<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>';}
+volSld.addEventListener('input',e=>{const v=parseFloat(e.target.value)/100;if(v===0){isMuted=true;prevVol=voiceAudio.volume||0.7;voiceAudio.volume=0;}else{if(isMuted)isMuted=false;prevVol=v;voiceAudio.volume=v;}updateVolUI();});
+volMute.addEventListener('click',()=>{if(isMuted){isMuted=false;voiceAudio.volume=prevVol;}else{isMuted=true;prevVol=voiceAudio.volume||0.7;voiceAudio.volume=0;}updateVolUI();});
+
+
+// Waveform drawing
+const bc=60,bh=Array.from({length:bc},()=>Math.random()*22+6);
+function initWF(){[bgCv,prCv].forEach(c=>{const p=c.parentElement;if(p){c.width=p.clientWidth;c.height=p.clientHeight;}});drawWF(bgCv,'#d1d1d6');}
+function drawWF(cv,clr){if(!cv)return;const ctx=cv.getContext('2d'),w=cv.width,h=cv.height;if(!w||!h)return;const bw=3.5,gap=2.5,tt=bw+gap;ctx.clearRect(0,0,w,h);ctx.fillStyle=clr;for(let i=0;i<bc;i++){const x=i*tt;if(x+bw>w)break;const bv=bh[i],y=(h-bv)/2;ctx.beginPath();ctx.roundRect(x,y,bw,bv,2);ctx.fill();}}
+function drawWFP(prog){if(!prCv)return;const ctx=prCv.getContext('2d'),w=prCv.width,h=prCv.height;if(!w||!h)return;const bw=3.5,gap=2.5,tt=bw+gap;ctx.clearRect(0,0,w,h);ctx.fillStyle='#ffcc00';const lim=Math.floor(bc*prog);for(let i=0;i<lim;i++){const x=i*tt;if(x+bw>w)break;const bv=bh[i],y=(h-bv)/2;ctx.beginPath();ctx.roundRect(x,y,bw,bv,2);ctx.fill();}}
+voiceAudio.addEventListener('timeupdate',()=>{if(voiceAudio.duration)drawWFP(voiceAudio.currentTime/voiceAudio.duration);});
+wfBtn.addEventListener('click',()=>{if(voiceAudio.paused){voiceAudio.play().catch(()=>{});wfIcon.innerHTML='<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';}else{voiceAudio.pause();wfIcon.innerHTML='<path d="M8 5v14l11-7z"/>';}});
+wfCont.addEventListener('click',e=>{const rect=bgCv.getBoundingClientRect();const pct=Math.min(1,Math.max(0,(e.clientX-rect.left)/rect.width));if(voiceAudio.duration)voiceAudio.currentTime=pct*voiceAudio.duration;});
+window.addEventListener('resize',()=>{initWF();if(!voiceAudio.paused&&voiceAudio.duration)drawWFP(voiceAudio.currentTime/voiceAudio.duration);});
+if(!window.CanvasRenderingContext2D.prototype.roundRect){CanvasRenderingContext2D.prototype.roundRect=function(x,y,w,h,r){if(w<2*r)r=w/2;if(h<2*r)r=h/2;this.moveTo(x+r,y);this.lineTo(x+w-r,y);this.quadraticCurveTo(x+w,y,x+w,y+r);this.lineTo(x+w,y+h-r);this.quadraticCurveTo(x+w,y+h,x+w-r,y+h);this.lineTo(x+r,y+h);this.quadraticCurveTo(x,y+h,x,y+h-r);this.lineTo(x,y+r);this.quadraticCurveTo(x,y,x+r,y);return this;};}
+document.getElementById('skipBackBtn').addEventListener('click',()=>{voiceAudio.currentTime=Math.max(0,voiceAudio.currentTime-10);});
+document.getElementById('skipFwdBtn').addEventListener('click',()=>{voiceAudio.currentTime=Math.min(voiceAudio.duration||0,voiceAudio.currentTime+10);});
+function fmtT(s){if(!s||isNaN(s))return'0:00';return Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0');}
+voiceAudio.addEventListener('timeupdate',()=>{const d=document.getElementById('audioTimeDisplay');if(d)d.textContent=fmtT(voiceAudio.currentTime)+' / '+fmtT(voiceAudio.duration);});
+voiceAudio.addEventListener('loadedmetadata',()=>{const d=document.getElementById('audioTimeDisplay');if(d)d.textContent='0:00 / '+fmtT(voiceAudio.duration);});
+
+
+// Fullscreen
+const fsBtn=document.getElementById('fullscreenBtn'),fsTxt=document.getElementById('fsText');
+function updateFSText(){const full=!!(document.fullscreenElement||document.webkitFullscreenElement||document.mozFullScreenElement);fsTxt.textContent=full?'Exit':'Full Screen';fsBtn.querySelector('span:first-child').textContent=full?'✖':'⛶';const sb=document.getElementById('answerStatusBar');if(sb){sb.classList.toggle('fullscreen-mode',full);sb.style.zIndex=full?'1000':'100';}}
+fsBtn.addEventListener('click',()=>{const el=document.documentElement;if(!document.fullscreenElement&&!document.webkitFullscreenElement){if(el.requestFullscreen)el.requestFullscreen().then(updateFSText);else if(el.webkitRequestFullscreen)el.webkitRequestFullscreen();}else{if(document.exitFullscreen)document.exitFullscreen().then(updateFSText);else if(document.webkitExitFullscreen)document.webkitExitFullscreen();}});
+document.addEventListener('fullscreenchange',updateFSText);document.addEventListener('webkitfullscreenchange',updateFSText);
+
+// Draggable status bar
+(function(){const bar=document.getElementById('answerStatusBar');const hdr=bar.querySelector('.status-header');let drag=false,sy=0,st=0;
+hdr.addEventListener('mousedown',e=>{drag=true;bar.classList.add('dragging-bar');bar.style.transform='none';sy=e.clientY;st=bar.getBoundingClientRect().top;bar.style.top=st+'px';e.preventDefault();});
+document.addEventListener('mousemove',e=>{if(!drag)return;bar.style.top=Math.max(10,Math.min(window.innerHeight-bar.offsetHeight-10,st+(e.clientY-sy)))+'px';});
+document.addEventListener('mouseup',()=>{drag=false;bar.classList.remove('dragging-bar');});
+hdr.addEventListener('touchstart',e=>{drag=true;bar.style.transform='none';sy=e.touches[0].clientY;st=bar.getBoundingClientRect().top;bar.style.top=st+'px';},{passive:true});
+document.addEventListener('touchmove',e=>{if(!drag)return;bar.style.top=Math.max(10,Math.min(window.innerHeight-bar.offsetHeight-10,st+(e.touches[0].clientY-sy)))+'px';},{passive:true});
+document.addEventListener('touchend',()=>{drag=false;});})();
+
+// Init
+initWF();updateVolUI();updateAnswerStatusBar();
+</script>
+</body>
+</html>
