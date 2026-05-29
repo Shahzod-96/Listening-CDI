@@ -121,9 +121,16 @@
         .matching-row:last-child{border-bottom:none}
         .matching-qnum{font-weight:700;color:#1e3a5f;min-width:34px}
         .matching-label{flex:1}
-        .flowchart-container{display:flex;flex-direction:column;align-items:center;gap:0;margin:16px 0}
-        .flowchart-box{background:#fff;border:2px solid #c3d9f5;border-radius:12px;padding:14px 24px;font-size:15px;font-weight:500;color:#1c2e40;width:100%;max-width:600px;text-align:center;position:relative}
-        .flowchart-arrow{font-size:22px;color:#1e3a5f;margin:4px 0;line-height:1}
+        .flowchart-layout{display:grid;grid-template-columns:1fr 220px;gap:24px;align-items:start;margin:16px 0}
+        .flowchart-container{display:flex;flex-direction:column;align-items:center;gap:0}
+        .flowchart-box{background:#fff;border:2px solid #c3d9f5;border-radius:12px;padding:12px 18px;font-size:14px;font-weight:500;color:#1c2e40;width:100%;text-align:center;position:relative}
+        .flowchart-arrow{font-size:20px;color:#1e3a5f;margin:3px 0;line-height:1}
+        .flowchart-options-box{background:#f0f6ff;border:2px solid #c3d9f5;border-radius:16px;padding:16px;position:sticky;top:80px}
+        .flowchart-options-box .options-title{font-weight:700;color:#1e3a5f;font-size:14px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid #ffcc00;display:block}
+        .flowchart-option-item{display:flex;gap:10px;font-size:13px;font-weight:600;color:#1c2e40;padding:5px 0;border-bottom:1px solid #ddeeff}
+        .flowchart-option-item:last-child{border-bottom:none}
+        .flowchart-option-letter{font-weight:800;color:#1e3a5f;min-width:18px}
+        @media(max-width:700px){.flowchart-layout{grid-template-columns:1fr}.flowchart-options-box{position:static}}
         .action-buttons{margin-top:40px;display:flex;justify-content:space-between;align-items:center;gap:18px;border-top:1px solid #e2edf2;padding-top:28px;flex-wrap:wrap}
         .action-buttons .left-group{display:flex;align-items:center;gap:12px}
         .action-buttons .right-group{display:flex;gap:18px}
@@ -311,40 +318,42 @@
                 <div class="section-card">
                     <div class="section-title">Questions 16–20 — Complete the flow-chart. Choose FIVE answers from the box.</div>
                     <div class="section-content">
-                        <div class="matching-box">
-                            <div style="font-weight:700;color:#1e3a5f;margin-bottom:10px;">Answer choices:</div>
-                            <div class="matching-options">
-                                <span class="matching-option-tag">A — bone</span>
-                                <span class="matching-option-tag">B — different</span>
-                                <span class="matching-option-tag">C — equal</span>
-                                <span class="matching-option-tag">D — elm</span>
-                                <span class="matching-option-tag">E — hazel</span>
-                                <span class="matching-option-tag">F — iron</span>
-                                <span class="matching-option-tag">G — peg</span>
-                                <span class="matching-option-tag">H — roof</span>
-                                <span class="matching-option-tag">I — scaffold</span>
+                        <div class="flowchart-layout">
+                            <!-- LEFT: Flowchart -->
+                            <div class="flowchart-container">
+                                <div class="flowchart-box">Mark centre of planned house with a <span class="number-badge">16</span><input type="text" class="map-label-input p2-flow-input" id="p2_ans16" maxlength="1" placeholder="A-I" autocomplete="off"></div>
+                                <div class="flowchart-arrow">▼</div>
+                                <div class="flowchart-box">Mark out circle for outer boundary</div>
+                                <div class="flowchart-arrow">▼</div>
+                                <div class="flowchart-box">Dig ground using tools made from <span class="number-badge">17</span><input type="text" class="map-label-input p2-flow-input" id="p2_ans17" maxlength="1" placeholder="A-I" autocomplete="off"></div>
+                                <div class="flowchart-arrow">▼</div>
+                                <div class="flowchart-box">Insert wall posts (Iron Age builders preferred wood from oak trees)</div>
+                                <div class="flowchart-arrow">▼</div>
+                                <div class="flowchart-box">Slot more stakes into upright posts</div>
+                                <div class="flowchart-arrow">▼</div>
+                                <div class="flowchart-box">Insert centre post and build a wooden <span class="number-badge">18</span><input type="text" class="map-label-input p2-flow-input" id="p2_ans18" maxlength="1" placeholder="A-I" autocomplete="off"> around it</div>
+                                <div class="flowchart-arrow">▼</div>
+                                <div class="flowchart-box">Add main supporting beams and ring beams</div>
+                                <div class="flowchart-arrow">▼</div>
+                                <div class="flowchart-box">Complete roof framework using <span class="number-badge">19</span><input type="text" class="map-label-input p2-flow-input" id="p2_ans19" maxlength="1" placeholder="A-I" autocomplete="off"> wood rods</div>
+                                <div class="flowchart-arrow">▼</div>
+                                <div class="flowchart-box">Cover roof with reed bundles of <span class="number-badge">20</span><input type="text" class="map-label-input p2-flow-input" id="p2_ans20" maxlength="1" placeholder="A-I" autocomplete="off"> lengths</div>
+                                <div class="flowchart-arrow">▼</div>
+                                <div class="flowchart-box">Daub with mixture of clay, dung and straw</div>
                             </div>
-                        </div>
-                        <div class="flowchart-container">
-                            <div class="flowchart-box">Mark centre of planned house with a <span class="number-badge">16</span><input type="text" class="map-label-input p2-flow-input" id="p2_ans16" maxlength="1" placeholder="A-I" autocomplete="off"></div>
-                            <div class="flowchart-arrow">▼</div>
-                            <div class="flowchart-box">Mark out circle for outer boundary</div>
-                            <div class="flowchart-arrow">▼</div>
-                            <div class="flowchart-box">Dig ground using tools made from <span class="number-badge">17</span><input type="text" class="map-label-input p2-flow-input" id="p2_ans17" maxlength="1" placeholder="A-I" autocomplete="off"></div>
-                            <div class="flowchart-arrow">▼</div>
-                            <div class="flowchart-box">Insert wall posts (Iron Age builders preferred wood from oak trees)</div>
-                            <div class="flowchart-arrow">▼</div>
-                            <div class="flowchart-box">Slot more stakes into upright posts</div>
-                            <div class="flowchart-arrow">▼</div>
-                            <div class="flowchart-box">Insert centre post and build a wooden <span class="number-badge">18</span><input type="text" class="map-label-input p2-flow-input" id="p2_ans18" maxlength="1" placeholder="A-I" autocomplete="off"> around it</div>
-                            <div class="flowchart-arrow">▼</div>
-                            <div class="flowchart-box">Add main supporting beams and ring beams</div>
-                            <div class="flowchart-arrow">▼</div>
-                            <div class="flowchart-box">Complete roof framework using <span class="number-badge">19</span><input type="text" class="map-label-input p2-flow-input" id="p2_ans19" maxlength="1" placeholder="A-I" autocomplete="off"> wood rods</div>
-                            <div class="flowchart-arrow">▼</div>
-                            <div class="flowchart-box">Cover roof with reed bundles of <span class="number-badge">20</span><input type="text" class="map-label-input p2-flow-input" id="p2_ans20" maxlength="1" placeholder="A-I" autocomplete="off"> lengths</div>
-                            <div class="flowchart-arrow">▼</div>
-                            <div class="flowchart-box">Daub with mixture of clay, dung and straw</div>
+                            <!-- RIGHT: Options box -->
+                            <div class="flowchart-options-box">
+                                <span class="options-title">📋 Answer choices</span>
+                                <div class="flowchart-option-item"><span class="flowchart-option-letter">A</span><span>bone</span></div>
+                                <div class="flowchart-option-item"><span class="flowchart-option-letter">B</span><span>different</span></div>
+                                <div class="flowchart-option-item"><span class="flowchart-option-letter">C</span><span>equal</span></div>
+                                <div class="flowchart-option-item"><span class="flowchart-option-letter">D</span><span>elm</span></div>
+                                <div class="flowchart-option-item"><span class="flowchart-option-letter">E</span><span>hazel</span></div>
+                                <div class="flowchart-option-item"><span class="flowchart-option-letter">F</span><span>iron</span></div>
+                                <div class="flowchart-option-item"><span class="flowchart-option-letter">G</span><span>peg</span></div>
+                                <div class="flowchart-option-item"><span class="flowchart-option-letter">H</span><span>roof</span></div>
+                                <div class="flowchart-option-item"><span class="flowchart-option-letter">I</span><span>scaffold</span></div>
+                            </div>
                         </div>
                     </div>
                 </div>
