@@ -421,39 +421,30 @@
                     </div>
                 </div>
 
-                <!-- Q34-40 Matching with map-label-input -->
+                <!-- Q34-40 Drag & Drop Matching -->
                 <div class="section-card">
-                    <div class="section-title">Questions 34–40 — Which theorist makes each point?</div>
+                    <div class="section-title">Questions 34–40 — Which theorist makes each point? (Drag & Drop)</div>
                     <div class="section-content">
-                        <p style="margin-bottom:16px;color:#4a627a;font-weight:500;">Write the correct letter, <strong>A</strong>, <strong>B</strong>, or <strong>C</strong>, next to each point.</p>
-                        <div style="background:#f0f6ff;border:2px solid #c3d9f5;border-radius:16px;padding:16px;margin-bottom:20px;">
-                            <span style="font-weight:700;color:#1e3a5f;font-size:14px;display:block;margin-bottom:8px;padding-bottom:8px;border-bottom:2px solid #ffcc00;">Theorists</span>
-                            <div style="display:flex;gap:24px;flex-wrap:wrap;font-size:14px;font-weight:600;color:#1c2e40;">
-                                <span><strong style="color:#1e3a5f;">A</strong> — Allen</span>
-                                <span><strong style="color:#1e3a5f;">B</strong> — James</span>
-                                <span><strong style="color:#1e3a5f;">C</strong> — Vander</span>
+                        <p style="margin-bottom:16px;color:#4a627a;font-weight:500;"><strong>NB:</strong> You may choose any group more than once. Drag each theorist from the right panel and drop onto the correct point on the left.</p>
+                        <div class="matching-grid" id="matchingGridP4">
+                            <!-- LEFT: drop zones -->
+                            <div class="matching-drop-zone" id="dropZonesP4">
+                                <h4>📌 Points</h4>
+                                <div id="p4dropZone34" class="matching-drop-slot" data-q="34"><span class="slot-label">34. Current teaching methods don't work</span><span class="slot-value" id="p4slotValue34"></span><button class="remove-btn" style="display:none;">✖</button></div>
+                                <div id="p4dropZone35" class="matching-drop-slot" data-q="35"><span class="slot-label">35. Many students don't understand computers</span><span class="slot-value" id="p4slotValue35"></span><button class="remove-btn" style="display:none;">✖</button></div>
+                                <div id="p4dropZone36" class="matching-drop-slot" data-q="36"><span class="slot-label">36. Computer technology doesn't interest all students</span><span class="slot-value" id="p4slotValue36"></span><button class="remove-btn" style="display:none;">✖</button></div>
+                                <div id="p4dropZone37" class="matching-drop-slot" data-q="37"><span class="slot-label">37. Students can still learn the traditional way</span><span class="slot-value" id="p4slotValue37"></span><button class="remove-btn" style="display:none;">✖</button></div>
+                                <div id="p4dropZone38" class="matching-drop-slot" data-q="38"><span class="slot-label">38. Students still need to learn research skills</span><span class="slot-value" id="p4slotValue38"></span><button class="remove-btn" style="display:none;">✖</button></div>
+                                <div id="p4dropZone39" class="matching-drop-slot" data-q="39"><span class="slot-label">39. We should use computer games to teach</span><span class="slot-value" id="p4slotValue39"></span><button class="remove-btn" style="display:none;">✖</button></div>
+                                <div id="p4dropZone40" class="matching-drop-slot" data-q="40"><span class="slot-label">40. Computers can't replace educators</span><span class="slot-value" id="p4slotValue40"></span><button class="remove-btn" style="display:none;">✖</button></div>
                             </div>
-                        </div>
-                        <div class="question-block" id="q34Block">
-                            <div class="question-text"><span class="question-number">34</span>Current teaching methods don't work <input type="text" class="map-label-input p4-input" id="p4_ans34" placeholder="?" maxlength="1" autocomplete="off"></div>
-                        </div>
-                        <div class="question-block" id="q35Block">
-                            <div class="question-text"><span class="question-number">35</span>Many students don't understand computers <input type="text" class="map-label-input p4-input" id="p4_ans35" placeholder="?" maxlength="1" autocomplete="off"></div>
-                        </div>
-                        <div class="question-block" id="q36Block">
-                            <div class="question-text"><span class="question-number">36</span>Computer technology doesn't interest all students <input type="text" class="map-label-input p4-input" id="p4_ans36" placeholder="?" maxlength="1" autocomplete="off"></div>
-                        </div>
-                        <div class="question-block" id="q37Block">
-                            <div class="question-text"><span class="question-number">37</span>Students can still learn the traditional way <input type="text" class="map-label-input p4-input" id="p4_ans37" placeholder="?" maxlength="1" autocomplete="off"></div>
-                        </div>
-                        <div class="question-block" id="q38Block">
-                            <div class="question-text"><span class="question-number">38</span>Students still need to learn research skills <input type="text" class="map-label-input p4-input" id="p4_ans38" placeholder="?" maxlength="1" autocomplete="off"></div>
-                        </div>
-                        <div class="question-block" id="q39Block">
-                            <div class="question-text"><span class="question-number">39</span>We should use computer games to teach <input type="text" class="map-label-input p4-input" id="p4_ans39" placeholder="?" maxlength="1" autocomplete="off"></div>
-                        </div>
-                        <div class="question-block" id="q40Block">
-                            <div class="question-text"><span class="question-number">40</span>Computers can't replace educators <input type="text" class="map-label-input p4-input" id="p4_ans40" placeholder="?" maxlength="1" autocomplete="off"></div>
+                            <!-- RIGHT: draggable theorists -->
+                            <div class="matching-items-list" id="draggableItemsP4">
+                                <h4>🎯 Theorists</h4>
+                                <div class="matching-drag-item" draggable="true" data-value="A" data-description="Allen"><span class="drag-letter-badge">A</span><span class="drag-description">Allen</span></div>
+                                <div class="matching-drag-item" draggable="true" data-value="B" data-description="James"><span class="drag-letter-badge">B</span><span class="drag-description">James</span></div>
+                                <div class="matching-drag-item" draggable="true" data-value="C" data-description="Vander"><span class="drag-letter-badge">C</span><span class="drag-description">Vander</span></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -489,8 +480,21 @@ const p3TextInputs={};
 for(let i=21;i<=30;i++) p3TextInputs[i]=document.getElementById('p3_ans'+i);
 
 const p4MCQ=[31,32,33];
-const p4MapInputs={};
-for(let i=34;i<=40;i++) p4MapInputs[i]=document.getElementById('p4_ans'+i);
+let matchingP4={34:"",35:"",36:"",37:"",38:"",39:"",40:""};
+
+function setMatchingSlotP4(qnum,value){
+    matchingP4[qnum]=value||"";
+    const slot=document.getElementById('p4dropZone'+qnum);
+    const vs=document.getElementById('p4slotValue'+qnum);
+    const rb=slot.querySelector('.remove-btn');
+    if(value){
+        const item=document.querySelector('#draggableItemsP4 .matching-drag-item[data-value="'+value+'"]');
+        vs.innerText=item?'— '+item.getAttribute('data-description'):value;
+        slot.classList.add('filled');rb.style.display="inline-block";
+        rb.onclick=(e)=>{e.stopPropagation();setMatchingSlotP4(qnum,"");refreshStatusBar();};
+    }else{vs.innerText="";slot.classList.remove('filled');rb.style.display="none";}
+    refreshStatusBar();
+}
 
 
 // Matching P2 slot logic
@@ -539,7 +543,7 @@ function getAnswerValue(q){
     }
     if(currentPage===4){
         if(q<=33){const b=document.getElementById('q'+q+'Block');const s=b?.querySelector('.mcq-option.selected');return s?s.getAttribute('data-value'):'';}
-        const i=p4MapInputs[q];return i?i.value.trim().toUpperCase():'';
+        return (matchingP4[q]||'').toUpperCase();
     }
     return '';
 }
@@ -554,7 +558,7 @@ function getAnswerValueForPage(q,pn){
     if(pn===3){const i=p3TextInputs[q];return i?i.value.trim().toLowerCase():'';}
     if(pn===4){
         if(q<=33){const b=document.getElementById('q'+q+'Block');const s=b?.querySelector('.mcq-option.selected');return s?s.getAttribute('data-value'):'';}
-        const i=p4MapInputs[q];return i?i.value.trim().toUpperCase():'';
+        return (matchingP4[q]||'').toUpperCase();
     }
     return '';
 }
@@ -584,7 +588,7 @@ function jumpToQuestion(q){
         else if(tp===3){const el=p3TextInputs[q];if(el){el.focus();el.scrollIntoView({behavior:'smooth',block:'center'});}}
         else{
             if(q<=33){const el=document.getElementById('q'+q+'Block');if(el)el.scrollIntoView({behavior:'smooth',block:'center'});}
-            else{const el=p4MapInputs[q];if(el){el.focus();el.scrollIntoView({behavior:'smooth',block:'center'});}}
+            else{const el=document.getElementById('p4dropZone'+q);if(el)el.scrollIntoView({behavior:'smooth',block:'center'});}
         }
     },100);
 }
@@ -604,7 +608,7 @@ function clearPage(pn){
         for(let i=21;i<=30;i++){if(p3TextInputs[i]){p3TextInputs[i].value='';p3TextInputs[i].classList.remove('has-value','correct-highlight','incorrect-highlight');}}
     } else if(pn===4){
         document.querySelectorAll('#page4 .mcq-option').forEach(o=>o.classList.remove('selected','correct-highlight','incorrect-highlight'));
-        for(let i=34;i<=40;i++){if(p4MapInputs[i]){p4MapInputs[i].value='';p4MapInputs[i].classList.remove('has-value','correct-highlight','incorrect-highlight');}}
+        for(let i=34;i<=40;i++){setMatchingSlotP4(i,"");const slot=document.getElementById('p4dropZone'+i);if(slot)slot.classList.remove('correct-highlight','incorrect-highlight');}
     }
     refreshStatusBar();
 }
@@ -628,7 +632,7 @@ function checkPage(pn){
             const inp=p3TextInputs[i];if(inp){inp.classList.remove('correct-highlight','incorrect-highlight');if(u)inp.classList.add(ic?'correct-highlight':'incorrect-highlight');}
         } else if(pn===4){
             if(i<=33){const b=document.getElementById('q'+i+'Block');b?.querySelectorAll('.mcq-option').forEach(o=>o.classList.remove('correct-highlight','incorrect-highlight'));if(u){const opt=b?.querySelector('.mcq-option[data-value="'+u.toUpperCase()+'"]');if(opt)opt.classList.add(ic?'correct-highlight':'incorrect-highlight');}}
-            else{const inp=p4MapInputs[i];if(inp){inp.classList.remove('correct-highlight','incorrect-highlight');if(u)inp.classList.add(ic?'correct-highlight':'incorrect-highlight');}}
+            else{const slot=document.getElementById('p4dropZone'+i);if(slot){slot.classList.remove('correct-highlight','incorrect-highlight');if(u)slot.classList.add(ic?'correct-highlight':'incorrect-highlight');}}
         }
     }
     showModal(res,cc,pn);
@@ -683,11 +687,19 @@ Object.values(p3TextInputs).forEach(inp=>{
     if(!inp)return;
     inp.addEventListener('input',function(){this.classList.remove('correct-highlight','incorrect-highlight');this.classList.toggle('has-value',this.value.trim()!=='');refreshStatusBar();});
 });
-// Map-label input listeners for P4
-Object.values(p4MapInputs).forEach(inp=>{
-    if(!inp)return;
-    inp.addEventListener('input',function(){this.classList.remove('correct-highlight','incorrect-highlight');this.classList.toggle('has-value',this.value.trim()!=='');refreshStatusBar();});
-});
+// Drag & Drop for P4 Q34-40
+(function initDragDropP4(){
+    const container=document.getElementById('draggableItemsP4');if(!container)return;
+    container.querySelectorAll('.matching-drag-item').forEach(drag=>{
+        drag.addEventListener('dragstart',e=>{e.dataTransfer.setData('text/plain',JSON.stringify({value:drag.getAttribute('data-value'),desc:drag.getAttribute('data-description')}));drag.classList.add('dragging');e.dataTransfer.effectAllowed='copy';});
+        drag.addEventListener('dragend',()=>drag.classList.remove('dragging'));
+    });
+    document.querySelectorAll('#dropZonesP4 .matching-drop-slot').forEach(zone=>{
+        zone.addEventListener('dragover',e=>{e.preventDefault();zone.classList.add('drag-over-drop');});
+        zone.addEventListener('dragleave',()=>zone.classList.remove('drag-over-drop'));
+        zone.addEventListener('drop',e=>{e.preventDefault();zone.classList.remove('drag-over-drop');const data=JSON.parse(e.dataTransfer.getData('text/plain'));setMatchingSlotP4(parseInt(zone.getAttribute('data-q')),data.value);});
+    });
+})();
 
 
 // Audio Player
